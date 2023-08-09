@@ -14,10 +14,17 @@
  *= require_self
  */
 
+// Graphical variables
+@import "config/fonts";
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
+
+h1, h2 {
+  margin: 0!important;
+}
 
 body {
   margin: 0!important;
@@ -33,4 +40,8 @@ body {
 
 .justify-content {
   justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
 }

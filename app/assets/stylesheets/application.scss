@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+body {
+  margin: 0!important;
+}
+
+.container {
+  padding-inline: 227px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}

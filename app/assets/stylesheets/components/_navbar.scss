@@ -2,7 +2,13 @@
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.04);
   height: 100px;
   font-size: 20px;
+
+  a:hover {
+    text-decoration: none;
+    color: #E94B4B;
+  }
 }
+
 
 .nav-link {
   padding-inline: 45px;

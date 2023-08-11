@@ -22,11 +22,7 @@
 @import "pages/index";
 
 
-h1, h2 {
-  margin: 0!important;
-}
-
-body {
+p, a, body {
   margin: 0!important;
 }
 
@@ -38,10 +34,35 @@ body {
   display: flex;
 }
 
-.justify-content {
+.justify-content-center {
   justify-content: center;
 }
 
 .space-between {
   justify-content: space-between;
+}
+
+.background-light-red {
+  background-color: #FFF9FB;
+  min-height: 100vh;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.padding-top-230px {
+  padding-top: 230px;
+}
+
+.padding-left-140px {
+  padding-left: 140px;
+}
+
+.padding-right-50px {
+  padding-right: 50px;
+}
+
+.padding-top-30px {
+  padding-top: 30px;
 }

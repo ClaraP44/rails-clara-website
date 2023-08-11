@@ -1,1 +1,10 @@
-<h1>PROJECTS</h1>
+<div class="container background-light-red">
+  <h1 class="h1-light-red text-align-center padding-top-80px">PROJETS</h1>
+
+
+  <% @projects.each do |project| %>
+    <%= link_to project.name, project_path(project) %>
+  <% end %>
+
+
+</div>

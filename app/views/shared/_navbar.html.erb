@@ -1,7 +1,9 @@
-<div class="navbar">
+<div class="navbar flex-container align-items-center">
 
-  <%= link_to "/", class: "nav-link" do %> Clara Pécot
-    <% end %>
+  <div class="nav-logo">
+    <%= link_to "/", class: "logo" do %> Clara Pécot
+      <% end %>
+  </div>
 
   <div class="flex-container justify-content-center">
     <%= link_to "À PROPOS", about_path, class: "nav-link" %>

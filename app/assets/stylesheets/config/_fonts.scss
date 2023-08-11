@@ -5,6 +5,15 @@ h1, h2 {
 
 p, a {
   font-family: 'Poppins';
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .h1-light-red {

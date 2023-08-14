@@ -15,7 +15,9 @@ Geocool = Project.create!(
   name: "Geocool",
   year: 2023,
   client: "Le Wagon",
-  team: "Vincent HELPIN"
+  team: "Vincent HELPIN
+  Almis LIPON",
+  description: "test"
 )
 
 puts "Seeds Finished!"

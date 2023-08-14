@@ -1,7 +1,18 @@
 <div class="container background-light-red">
-  <h1 class="h1-light-red text-align-center"><%= @project.name %></h1>
 
-  <h2><%= @project.year %></h2>
-  <h2><%= @project.team %></h2>
-  <h2><%= @project.client %></h2>
+  <img src="" alt="">
+
+  <h1 class="h1-light-red text-align-center"><%= @project.name.upcase %></h1>
+
+  <h2 class="h2-red">Catégorie</h2>
+  <h2 class="h2-red">Année</h2>
+  <h2 class="h2-red">Langages web</h2>
+  <h2 class="h2-red">Client</h2>
+  <h2 class="h2-red">Équipe</h2>
+
+  <p><%= @project.year %></p>
+  <p><%= @project.team %></p>
+  <p><%= @project.client %></p>
+
+  <p><%= @project.description %></p>
 </div>

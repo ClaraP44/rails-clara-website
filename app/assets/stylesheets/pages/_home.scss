@@ -4,6 +4,20 @@
 
 .container-intro {
   padding-block: 200px;
+
+  h1 {
+    color: rgba(255, 255, 255, 0.50);;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h2 {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 400;
+    padding-bottom: 20px;
+  }
 }
 
 .container-intro-text {

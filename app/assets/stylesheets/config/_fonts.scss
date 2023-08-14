@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Jockey One', sans-serif;
   margin: 0!important;
 }
@@ -25,4 +25,21 @@ a:hover {
 .h2-red {
   color: #E94B4B;
   font-weight: 400;
+}
+
+.h2-white-55px {
+  color: #FFF;
+  font-size: 55px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.h3-white {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.p-text-white {
+  color: #FFF;
 }

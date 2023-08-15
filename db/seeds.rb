@@ -14,9 +14,34 @@ puts "Creating projects"
 Geocool = Project.create!(
   name: "Geocool",
   year: 2023,
-  client: "Le Wagon",
+  client: "",
   team: "Vincent HELPIN
   Almis LIPON",
+  description: "test"
+)
+
+NoiseImpulsion = Project.create!(
+  name: "Noise Impulsion",
+  year: 2023,
+  client: "Noise Impulsion",
+  team: "",
+  description: "test"
+)
+
+AirPasSoft = Project.create!(
+  name: "Air pas Soft",
+  year: 2023,
+  client: "",
+  team: "Vincent HELPIN
+  Almis LIPON",
+  description: "test"
+)
+
+Léapicota = Project.create!(
+  name: "Léapicota",
+  year: 2022,
+  client: "Léa PICOT",
+  team: "",
   description: "test"
 )
 

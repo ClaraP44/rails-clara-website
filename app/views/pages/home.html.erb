@@ -19,7 +19,11 @@
   <div>
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
-    <p>TODO</p>
+    <%# TODO %>
+    <% @projects.first(4).each do |project| %>
+      <%= link_to project.name, project_path(project) %>
+    <% end %>
+
 
     <div class="btn-italic">
       <%= link_to '- voir plus', projects_path %>

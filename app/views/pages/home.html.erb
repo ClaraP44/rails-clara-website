@@ -20,7 +20,7 @@
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
     <%# TODO %>
-    <div class="flex-container justify-content-center">
+    <div class="flex-container justify-content-center padding-bottom-40px">
       <% @projects.first(4).each do |project| %>
         <div class="img-vignette-project">
           <%= link_to project.name, project_path(project) %>

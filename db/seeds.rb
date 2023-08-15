@@ -17,7 +17,7 @@ Geocool = Project.create!(
   client: "",
   team: "Vincent HELPIN
   Almis LIPON",
-  description: "test"
+  description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations."
 )
 
 NoiseImpulsion = Project.create!(
@@ -25,7 +25,7 @@ NoiseImpulsion = Project.create!(
   year: 2023,
   client: "Noise Impulsion",
   team: "",
-  description: "test"
+  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram."
 )
 
 AirPasSoft = Project.create!(
@@ -34,7 +34,7 @@ AirPasSoft = Project.create!(
   client: "",
   team: "Vincent HELPIN
   Almis LIPON",
-  description: "test"
+  description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli"
 )
 
 Léapicota = Project.create!(
@@ -42,7 +42,7 @@ Léapicota = Project.create!(
   year: 2022,
   client: "Léa PICOT",
   team: "",
-  description: "test"
+  description: "Léa PICOT aka Léapicot est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
 )
 
 puts "Seeds Finished!"

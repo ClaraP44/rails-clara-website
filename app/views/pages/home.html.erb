@@ -20,9 +20,13 @@
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
     <%# TODO %>
-    <% @projects.first(4).each do |project| %>
-      <%= link_to project.name, project_path(project) %>
-    <% end %>
+    <div class="flex-container justify-content-center">
+      <% @projects.first(4).each do |project| %>
+        <div>
+          <%= link_to project.name, project_path(project) %>
+        </div>
+      <% end %>
+    </div>
 
 
     <div class="btn-italic">

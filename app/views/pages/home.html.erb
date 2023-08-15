@@ -22,7 +22,7 @@
     <%# TODO %>
     <div class="flex-container justify-content-center">
       <% @projects.first(4).each do |project| %>
-        <div>
+        <div class="img-vignette-project">
           <%= link_to project.name, project_path(project) %>
         </div>
       <% end %>

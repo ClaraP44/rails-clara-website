@@ -20,6 +20,12 @@ Geocool = Project.create!(
   description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations."
 )
 
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+Geocool.save
+
+
+
 NoiseImpulsion = Project.create!(
   name: "Noise Impulsion",
   year: 2023,

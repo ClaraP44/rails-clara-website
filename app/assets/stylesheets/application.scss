@@ -44,7 +44,7 @@ hr {
 
 .background-light-red {
   background-color: #FFF9FB;
-  min-height: 100vh;
+  height: calc(100vh - 80px);
 }
 
 .align-items-center {

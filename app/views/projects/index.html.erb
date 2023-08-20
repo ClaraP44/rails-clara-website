@@ -3,7 +3,9 @@
 
   <div class="flex-container justify-content-center">
     <% @projects.each do |project| %>
-      <%= link_to project.name, project_path(project) %>
+      <div class="img-vignette-project">
+        <%= link_to project.name, project_path(project) %>
+      </div>
     <% end %>
   </div>
 

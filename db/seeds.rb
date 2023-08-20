@@ -33,6 +33,7 @@ NoiseImpulsion = Project.create!(
   team: "",
   description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram."
 )
+NoiseImpulsion.save
 
 AirPasSoft = Project.create!(
   name: "Air pas Soft",
@@ -42,6 +43,7 @@ AirPasSoft = Project.create!(
   Almis LIPON",
   description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli"
 )
+AirPasSoft.save
 
 Léapicota = Project.create!(
   name: "Léapicota",
@@ -50,5 +52,16 @@ Léapicota = Project.create!(
   team: "",
   description: "Léa PICOT aka Léapicot est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
 )
+Léapicota.save
+
+RapidCouture = Project.create!(
+  name: "Rapid Couture",
+  year: 2022,
+  client: "Rapid Couture",
+  team: "",
+  description: "..."
+)
+RapidCouture.save
+
 
 puts "Seeds Finished!"

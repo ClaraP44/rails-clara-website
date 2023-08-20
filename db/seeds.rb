@@ -21,7 +21,7 @@ Geocool = Project.create!(
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpg")
 Geocool.save
 
 

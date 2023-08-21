@@ -1,20 +1,43 @@
 <div class="container background-light-red">
 
-  <img src="" alt="">
+  <%# IMAGE HERE %>
+  <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill %>
 
-  <h1 class="h1-light-red text-align-center"><%= @project.name.upcase %></h1>
 
-  <h2 class="h2-red">Catégorie</h2>
-  <h2 class="h2-red">Année</h2>
-  <h2 class="h2-red">Langages web</h2>
-  <h2 class="h2-red">Client</h2>
-  <h2 class="h2-red">Équipe</h2>
+  <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>
 
-  <p><%= @project.year %></p>
-  <p><%= @project.team %></p>
-  <p><%= @project.client %></p>
+  <div class="flex-container">
 
-  <p><%= @project.description %></p>
+    <div>
+      <div class="flex-container">
+        <h2 class="h2-red">Catégorie</h2>
+      </div>
 
+      <div class="flex-container">
+        <h2 class="h2-red">Année</h2>
+          <p><%= @project.year %></p>
+      </div>
+
+      <div class="flex-container">
+        <h2 class="h2-red">Langages web</h2>
+      </div>
+
+      <div class="flex-container">
+        <h2 class="h2-red">Client</h2>
+          <p><%= @project.client %></p>
+      </div>
+
+      <div class="flex-container">
+        <h2 class="h2-red">Équipe</h2>
+          <p><%= @project.team %></p>
+      </div>
+
+    </div>
+
+    <div>
+      <p><%= @project.description %></p>
+    </div>
+
+  </div>
 
 </div>

@@ -5,6 +5,13 @@
     <% @projects.each do |project| %>
       <div class="img-vignette-project">
         <%= link_to project.name, project_path(project) %>
+
+        <% if project.photo.attached? %>
+          <%= cl_image_tag project.photo.key, width: 200, height: 200, crop: :fill %>
+        <% else %>
+          <%= cl_image_tag("racphw8y1wvw9fv9s4lc.jpeg", width: 200, height: 200, crop: :fill) %>
+        <% end %>
+
       </div>
     <% end %>
   </div>

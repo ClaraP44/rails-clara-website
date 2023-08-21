@@ -1,7 +1,7 @@
 <div class="container background-light-red">
   <h1 class="h1-light-red text-align-center padding-top-80px padding-bottom-50px">PROJETS</h1>
 
-  <div class="flex-container justify-content-center">
+  <div class="columns-3">
     <% @projects.each do |project| %>
       <div class="img-vignette-project">
         <%= link_to project.name, project_path(project) %>

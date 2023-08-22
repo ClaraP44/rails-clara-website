@@ -4,22 +4,15 @@
   <div class="columns-3">
     <% @projects.each do |project| %>
 
-      <div class="img-vignette-project-homepage">
-        <%= link_to project.name, project_path(project) %>
+      <div class="img-vignette-projects">
 
-        <% if project.photo.attached? %>
-          <%= cl_image_tag project.photo.key, width: 240, height: 240, crop: :fill %>
-        <% else %>
-          <%= cl_image_tag("racphw8y1wvw9fv9s4lc.jpeg", width: 240, height: 240, crop: :fill) %>
+        <%= link_to project_path(project) do %>
+          <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
         <% end %>
 
       </div>
 
     <% end %>
-
-
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 200, height: 200, crop: :fill) %>
-
 
   </div>
 

@@ -4,3 +4,22 @@
   gap: 15px;
   justify-items: center;
 }
+
+.img-vignette-projects {
+  background: black;
+  width: 330px;
+  height: 330px;
+  gap: 10px;
+
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+  }
+}

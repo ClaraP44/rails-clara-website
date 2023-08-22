@@ -24,8 +24,6 @@ Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/
 
 
 
-
-
 NoiseImpulsion = Project.create!(
   name: "Noise Impulsion",
   year: 2023,
@@ -33,7 +31,11 @@ NoiseImpulsion = Project.create!(
   team: "",
   description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram."
 )
-NoiseImpulsion.save
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+NoiseImpulsion.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
+
 
 AirPasSoft = Project.create!(
   name: "Air pas Soft",
@@ -43,7 +45,11 @@ AirPasSoft = Project.create!(
   Almis LIPON",
   description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli"
 )
-AirPasSoft.save
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
+
 
 Léapicota = Project.create!(
   name: "Léapicota",
@@ -52,7 +58,11 @@ Léapicota = Project.create!(
   team: "",
   description: "Léa PICOT aka Léapicot est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
 )
-Léapicota.save
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+Léapicota.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
+
 
 RapidCouture = Project.create!(
   name: "Rapid Couture",
@@ -61,7 +71,10 @@ RapidCouture = Project.create!(
   team: "",
   description: "..."
 )
-RapidCouture.save
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
 
 
 puts "Seeds Finished!"

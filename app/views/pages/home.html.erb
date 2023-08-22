@@ -20,11 +20,17 @@
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
     <%# TODO %>
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 200, height: 200, crop: :fill) %>
 
     <div class="flex-container justify-content-center padding-bottom-40px">
       <% @projects.first(4).each do |project| %>
-        <div class="img-vignette-project">
+        <div class="img-vignette-project-homepage">
+
+          <% if project.photo.attached? %>
+            <%= cl_image_tag project.photo.key, width: 240, height: 240, crop: :fill %>
+          <% else %>
+            <%= cl_image_tag("racphw8y1wvw9fv9s4lc.jpeg", width: 240, height: 240, crop: :fill) %>
+          <% end %>
+
           <%= link_to project.name, project_path(project) %>
         </div>
       <% end %>

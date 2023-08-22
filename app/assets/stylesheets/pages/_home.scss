@@ -60,11 +60,23 @@
   }
 }
 
-.img-vignette-project {
+.img-vignette-project-homepage {
   background: black;
   width: 240px;
   height: 240px;
   margin-inline: 5px;
+
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+  }
 }
 
 .icone-competence {

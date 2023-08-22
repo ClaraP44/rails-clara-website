@@ -20,6 +20,8 @@
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
     <%# TODO %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 200, height: 200, crop: :fill) %>
+
     <div class="flex-container justify-content-center padding-bottom-40px">
       <% @projects.first(4).each do |project| %>
         <div class="img-vignette-project">
@@ -37,36 +39,40 @@
   <div>
     <h2 class="h2-homepage text-align-center">COMPÉTENCES</h2>
 
-      <%# TODO %>
-
       <div class="container-icones-competences flex-container space-between">
 
         <div>
-          <div>
+          <div class="padding-bottom-40px">
+            <i class="icone-competence padding-bottom-15px fa-solid fa-code" style="color: #ffffff;"></i>
             <p>développement d’applications web</p>
           </div>
 
           <div>
+            <i class="icone-competence padding-bottom-15px fa-sharp fa-solid fa-photo-film" style="color: #ffffff;"></i>
             <p>montage vidéo</p>
           </div>
         </div>
 
         <div>
-          <div>
+          <div class="padding-bottom-40px">
+            <i class="icone-competence padding-bottom-15px fa-brands fa-wordpress-simple" style="color: #ffffff;"></i>
             <p>création de sites wordpress</p>
           </div>
 
           <div>
+            <i class="icone-competence padding-bottom-15px fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
             <p>référencement naturel et payant</p>
           </div>
         </div>
 
         <div>
-          <div>
+          <div class="padding-bottom-40px">
+            <i class="icone-competence padding-bottom-15px fa-solid fa-hashtag" style="color: #ffffff;"></i>
             <p>gestion de réseaux sociaux</p>
           </div>
 
           <div>
+            <i class="icone-competence padding-bottom-15px fa-solid fa-palette" style="color: #ffffff;"></i>
             <p>suite adobe</p>
           </div>
         </div>
@@ -115,6 +121,5 @@
     </div>
 
   </div>
-
 
 </div>

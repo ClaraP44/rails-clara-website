@@ -25,8 +25,11 @@
       <% @projects.first(4).each do |project| %>
         <div class="img-vignette-project-homepage">
 
-          <%= link_to project_path(project) do %>
-            <%= cl_image_tag project.photo.key, width: 240, height: 240, crop: :fill %>
+          <%= link_to project_path(project), class: "image-link" do %>
+            <div class="image-container-projects-homepage">
+              <%= cl_image_tag project.photo.key, width: 240, height: 240, crop: :fill %>
+              <h3 class="image-text-projects-homepage"><%= project.name %></h2>
+            </div>
           <% end %>
 
         </div>

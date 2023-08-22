@@ -1,13 +1,16 @@
 <div class="container background-light-red">
   <h1 class="h1-light-red text-align-center padding-top-80px padding-bottom-50px">PROJETS</h1>
 
-  <div class="columns-3">
+  <div class="columns-3 padding-bottom-100px">
     <% @projects.each do |project| %>
 
       <div class="img-vignette-projects">
 
-        <%= link_to project_path(project) do %>
-          <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+        <%= link_to project_path(project), class: "image-link" do %>
+          <div class="image-container-projects">
+            <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+            <h2 class="image-text-projects"><%= project.name %></h2>
+          </div>
         <% end %>
 
       </div>

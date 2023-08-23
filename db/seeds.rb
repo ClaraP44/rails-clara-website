@@ -11,6 +11,8 @@ Project.destroy_all
 
 puts "Creating projects"
 
+# PROJECTS
+
 Geocool = Project.create!(
   name: "Geocool",
   year: 2023,
@@ -75,6 +77,17 @@ RapidCouture = Project.create!(
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
 RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
 
+
+STDevelopments = Project.create!(
+  name: "ST Developments",
+  year: 2022,
+  client: "ST Developments",
+  team: "",
+  description: "..."
+)
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+STDevelopments.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
 
 
 puts "Seeds Finished!"

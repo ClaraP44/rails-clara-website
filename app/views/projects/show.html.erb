@@ -6,9 +6,9 @@
 
   <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>
 
-  <div class="flex-container">
+  <div class="container-infos-project flex-container">
 
-    <div>
+    <div class="width-50percent">
       <div class="flex-container">
         <h2 class="h2-red">Catégorie</h2>
       </div>
@@ -34,10 +34,51 @@
 
     </div>
 
-    <div>
+    <div class="width-50percent">
       <p><%= @project.description %></p>
     </div>
 
   </div>
+
+
+
+    <%# TEST %>
+  <div class="flex-container">
+    <div class="flex-container">
+      <div class="column-test">
+        <h2 class="h2-red">Catégorie</h2>
+        <h2 class="h2-red">Catégorie</h2>
+        <h2 class="h2-red">Catégorie</h2>
+      </div>
+
+      <div class="column-test">
+        <p><%= @project.team %></p>
+        <p><%= @project.team %></p>
+        <p><%= @project.team %></p>
+      </div>
+
+    </div>
+
+      <div class="column-test">
+        <p><%= @project.description %></p>
+      </div>
+
+  </div>
+
+
+
+  <div class="container-global">
+
+    <div class="container-test">
+      <div class="column-h2">
+      </div>
+
+      <div class="column-text">
+      </div>
+    </div>
+
+  </div>
+
+
 
 </div>

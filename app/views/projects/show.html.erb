@@ -34,7 +34,8 @@
       <% if @project.team.present? %>
       <div>
         <h2 class="h2-red">Équipe</h2>
-          <p><%= @project.team %></p>
+          <% team_members = @project.team.split("\n") %>
+          <p><%= team_members.join("<br>").html_safe %></p>
       </div>
       <% end %>
 

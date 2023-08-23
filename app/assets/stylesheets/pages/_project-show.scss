@@ -1,11 +1,25 @@
-.container-infos-project>div>div {
+.container-infos-and-description-project>div>div {
   align-items: baseline;
 }
 
+.container-description-project {
+  width: 50%;
+}
 
+.container-infos-project {
+  width: 50%;
 
-.column-test {
-  flex: 1;
-  border: 1px solid #ccc;
-  padding: 10px;
+  div {
+    display: flex;
+    padding-bottom: 15px;
+
+    h2 {
+      width: 35%;
+    }
+
+    p {
+      width: 65%;
+    }
+  }
+
 }

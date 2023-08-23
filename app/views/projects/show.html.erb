@@ -1,4 +1,4 @@
-<div class="container background-light-red">
+<div class="container background-light-red padding-bottom-150px">
 
   <%# IMAGE HERE %>
   <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill %>
@@ -6,79 +6,46 @@
 
   <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>
 
-  <div class="container-infos-project flex-container">
+  <div class="container-infos-and-description-project flex-container">
 
-    <div class="width-50percent">
-      <div class="flex-container">
+    <div class="container-infos-project width-50percent">
+
+      <%# INFOS  PROJECT%>
+      <div>
         <h2 class="h2-red">Catégorie</h2>
       </div>
 
-      <div class="flex-container">
+      <div>
         <h2 class="h2-red">Année</h2>
           <p><%= @project.year %></p>
       </div>
 
-      <div class="flex-container">
+      <div>
         <h2 class="h2-red">Langages web</h2>
       </div>
 
-      <div class="flex-container">
+      <% if @project.client.present? %>
+      <div>
         <h2 class="h2-red">Client</h2>
-          <p><%= @project.client %></p>
+        <p><%= @project.client %></p>
       </div>
+      <% end %>
 
-      <div class="flex-container">
+      <% if @project.team.present? %>
+      <div>
         <h2 class="h2-red">Équipe</h2>
           <p><%= @project.team %></p>
       </div>
+      <% end %>
 
     </div>
 
-    <div class="width-50percent">
+    <%# DESCRIPTION %>
+    <div class="container-description-project">
       <p><%= @project.description %></p>
     </div>
 
   </div>
-
-
-
-    <%# TEST %>
-  <div class="flex-container">
-    <div class="flex-container">
-      <div class="column-test">
-        <h2 class="h2-red">Catégorie</h2>
-        <h2 class="h2-red">Catégorie</h2>
-        <h2 class="h2-red">Catégorie</h2>
-      </div>
-
-      <div class="column-test">
-        <p><%= @project.team %></p>
-        <p><%= @project.team %></p>
-        <p><%= @project.team %></p>
-      </div>
-
-    </div>
-
-      <div class="column-test">
-        <p><%= @project.description %></p>
-      </div>
-
-  </div>
-
-
-
-  <div class="container-global">
-
-    <div class="container-test">
-      <div class="column-h2">
-      </div>
-
-      <div class="column-text">
-      </div>
-    </div>
-
-  </div>
-
 
 
 </div>

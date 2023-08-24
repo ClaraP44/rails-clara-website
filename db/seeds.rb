@@ -58,7 +58,7 @@ Léapicota = Project.create!(
   year: 2022,
   client: "Léa PICOT",
   team: "",
-  description: "Léa PICOT aka Léapicot est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
+  description: "Léa PICOT alias Léapicota est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))

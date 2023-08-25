@@ -71,7 +71,7 @@ RapidCouture = Project.create!(
   year: 2022,
   client: "Rapid Couture",
   team: "",
-  description: "..."
+  description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés."
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -83,7 +83,7 @@ STDevelopments = Project.create!(
   year: 2022,
   client: "ST Developments",
   team: "",
-  description: "..."
+  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress."
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))

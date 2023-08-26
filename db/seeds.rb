@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "Cleaning database..."
+ProjectWebLanguage.destroy_all
 Project.destroy_all
 Category.destroy_all
 WebLanguage.destroy_all
@@ -44,19 +45,19 @@ puts "Creating web languages"
 
 # WEB LANGUAGES
 
-HTML_CSS = WebLanguage.find_or_create_by(
+HTML_CSS = WebLanguage.create!(
   name: "HTML/CSS"
 )
 
-Javascript = WebLanguage.find_or_create_by(
+Javascript = WebLanguage.create!(
   name: "Javascript"
 )
 
-SQL = WebLanguage.find_or_create_by(
+SQL = WebLanguage.create!(
   name: "SQL"
 )
 
-Ruby = WebLanguage.find_or_create_by(
+Ruby = WebLanguage.create!(
   name: "Ruby"
 )
 
@@ -71,7 +72,8 @@ Geocool = Project.create!(
   year: 2023,
   client: "",
   team: "Vincent HELPIN\nAlmis LIPON",
-  description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations."
+  description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations.",
+  web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))

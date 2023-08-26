@@ -24,7 +24,9 @@
 
       <div>
         <h2 class="h2-red">Langages web</h2>
-
+          <% @project.web_languages.each do |language| %>
+            <%= language.name %>
+          <% end %>
       </div>
 
       <% if @project.client.present? %>

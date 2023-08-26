@@ -88,7 +88,7 @@ NoiseImpulsion = Project.create!(
   year: 2023,
   client: "Noise Impulsion",
   team: "",
-  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram."
+  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -102,7 +102,8 @@ AirPasSoft = Project.create!(
   client: "",
   team: "Vincent HELPIN
   Almis LIPON",
-  description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli"
+  description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli",
+  web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
 # AirPasSoft.web_languages << Ruby
@@ -117,7 +118,7 @@ Léapicota = Project.create!(
   year: 2022,
   client: "Léa PICOT",
   team: "",
-  description: "Léa PICOT alias Léapicota est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi."
+  description: "Léa PICOT alias Léapicota est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -130,7 +131,7 @@ RapidCouture = Project.create!(
   year: 2022,
   client: "Rapid Couture",
   team: "",
-  description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés."
+  description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -142,7 +143,7 @@ STDevelopments = Project.create!(
   year: 2022,
   client: "ST Developments",
   team: "",
-  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress."
+  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))

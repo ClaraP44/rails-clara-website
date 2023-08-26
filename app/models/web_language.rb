@@ -1,0 +1,2 @@
+class WebLanguage < ApplicationRecord
+end

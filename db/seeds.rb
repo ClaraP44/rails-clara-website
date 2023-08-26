@@ -8,53 +8,60 @@
 
 puts "Cleaning database..."
 Project.destroy_all
+Category.destroy_all
+WebLanguage.destroy_all
 
-puts "Creating projects"
 
 
+puts "Creating categories"
 
-# PROJECT CATEGORIES
+# CATEGORIES
 
-Web_development = Category.create! (
+Web_development = Category.create!(
   name: "Développement web"
 )
 
-Graphic_design = Category.create! (
+Graphic_design = Category.create!(
   name: "Design graphique"
 )
 
-Video_editing = Category.create! (
+Video_editing = Category.create!(
   name: "Montage vidéo"
 )
 
-Visual_identity = Category.create! (
+Visual_identity = Category.create!(
   name: "Identité visuelle"
 )
 
-Wordpress = Category.create! (
+Wordpress = Category.create!(
   name: "Wordpress"
 )
 
 
 
+puts "Creating web languages"
+
 # WEB LANGUAGES
 
-HTML_CSS = WebLanguage.create! (
+HTML_CSS = WebLanguage.create!(
   name: "HTML/CSS"
 )
 
-Javascript = WebLanguage.create! (
+Javascript = WebLanguage.create!(
   name: "Javascript"
 )
 
-SQL = WebLanguage.create! (
+SQL = WebLanguage.create!(
   name: "SQL"
+)
 
-)Ruby = WebLanguage.create! (
+Ruby = WebLanguage.create!(
   name: "Ruby"
 )
 
 
+
+puts "Creating projects"
 
 # PROJECTS
 

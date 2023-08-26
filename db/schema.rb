@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_26_200138) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_26_204417) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -45,6 +45,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_26_200138) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "project_categories", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_project_categories_on_category_id"
+    t.index ["project_id"], name: "index_project_categories_on_project_id"
+  end
+
+  create_table "project_web_languages", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "web_language_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_web_languages_on_project_id"
+    t.index ["web_language_id"], name: "index_project_web_languages_on_web_language_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.integer "year"
@@ -63,4 +81,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_26_200138) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "project_categories", "categories"
+  add_foreign_key "project_categories", "projects"
+  add_foreign_key "project_web_languages", "projects"
+  add_foreign_key "project_web_languages", "web_languages"
 end

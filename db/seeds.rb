@@ -11,6 +11,51 @@ Project.destroy_all
 
 puts "Creating projects"
 
+
+
+# PROJECT CATEGORIES
+
+Web_development = Category.create! (
+  name: "Développement web"
+)
+
+Graphic_design = Category.create! (
+  name: "Design graphique"
+)
+
+Video_editing = Category.create! (
+  name: "Montage vidéo"
+)
+
+Visual_identity = Category.create! (
+  name: "Identité visuelle"
+)
+
+Wordpress = Category.create! (
+  name: "Wordpress"
+)
+
+
+
+# WEB LANGUAGES
+
+HTML_CSS = WebLanguage.create! (
+  name: "HTML/CSS"
+)
+
+Javascript = WebLanguage.create! (
+  name: "Javascript"
+)
+
+SQL = WebLanguage.create! (
+  name: "SQL"
+
+)Ruby = WebLanguage.create! (
+  name: "Ruby"
+)
+
+
+
 # PROJECTS
 
 Geocool = Project.create!(

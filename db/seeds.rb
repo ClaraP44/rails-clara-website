@@ -13,6 +13,7 @@ WebLanguage.destroy_all
 
 
 
+
 puts "Creating categories"
 
 # CATEGORIES
@@ -43,19 +44,19 @@ puts "Creating web languages"
 
 # WEB LANGUAGES
 
-HTML_CSS = WebLanguage.create!(
+HTML_CSS = WebLanguage.find_or_create_by(
   name: "HTML/CSS"
 )
 
-Javascript = WebLanguage.create!(
+Javascript = WebLanguage.find_or_create_by(
   name: "Javascript"
 )
 
-SQL = WebLanguage.create!(
+SQL = WebLanguage.find_or_create_by(
   name: "SQL"
 )
 
-Ruby = WebLanguage.create!(
+Ruby = WebLanguage.find_or_create_by(
   name: "Ruby"
 )
 
@@ -75,6 +76,8 @@ Geocool = Project.create!(
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
 Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
+
 
 
 
@@ -99,6 +102,8 @@ AirPasSoft = Project.create!(
   Almis LIPON",
   description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli"
 )
+
+# AirPasSoft.web_languages << Ruby
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
 AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")

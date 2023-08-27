@@ -14,7 +14,11 @@
       <div>
         <h2 class="h2-red">Catégorie</h2>
           <%# TO DO %>
-
+          <div class="display-block">
+          <% @project.categories.each do |category| %>
+            <p><%= category.name %></p>
+          <% end %>
+          </div>
       </div>
 
       <div>
@@ -25,13 +29,11 @@
       <% if @project.web_languages.present? %>
       <div>
         <h2 class="h2-red">Langages web</h2>
-
           <div class="display-block">
           <% @project.web_languages.each do |language| %>
             <p><%= language.name %></p>
           <% end %>
           </div>
-
       </div>
       <% end %>
 

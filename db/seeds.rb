@@ -68,6 +68,7 @@ puts "Creating projects"
 # PROJECTS
 
 Geocool = Project.create!(
+  categories: [Web_development, Graphic_design],
   name: "Geocool",
   year: 2023,
   client: "",
@@ -84,6 +85,7 @@ Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/
 
 
 NoiseImpulsion = Project.create!(
+  categories: [Graphic_design],
   name: "Noise Impulsion",
   year: 2023,
   client: "Noise Impulsion",
@@ -97,6 +99,7 @@ NoiseImpulsion.photo.attach(io: file, filename: "image-test.jpg", content_type: 
 
 
 AirPasSoft = Project.create!(
+  categories: [Web_development, Graphic_design],
   name: "Air pas Soft",
   year: 2023,
   client: "",
@@ -114,6 +117,7 @@ AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "ima
 
 
 Léapicota = Project.create!(
+  categories: [Wordpress],
   name: "Léapicota",
   year: 2022,
   client: "Léa PICOT",
@@ -126,19 +130,22 @@ Léapicota.photo.attach(io: file, filename: "image-test.jpg", content_type: "ima
 
 
 
-RapidCouture = Project.create!(
-  name: "Rapid Couture",
+NoiseImpulsion2 = Project.create!(
+  categories: [Video_editing],
+  name: "Recyclage de Metal Rouillé",
   year: 2022,
-  client: "Rapid Couture",
+  client: "Noise Impulsion",
   team: "",
-  description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
+  description: ".",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+NoiseImpulsion2.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
 
 
 STDevelopments = Project.create!(
+  categories: [Wordpress],
   name: "ST Developments",
   year: 2022,
   client: "ST Developments",
@@ -148,6 +155,21 @@ STDevelopments = Project.create!(
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
 STDevelopments.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
+
+
+# RapidCouture = Project.create!(
+#   categories: [Video_editing],
+#   name: "Rapid Couture",
+#   year: 2022,
+#   client: "Rapid Couture",
+#   team: "",
+#   description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
+# )
+
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+# RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+
 
 
 puts "Seeds Finished!"

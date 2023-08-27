@@ -72,7 +72,7 @@
     transition: filter 0.3s ease;
   }
 
-  img:hover {
+  &:hover img {
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
     transition: filter 0.3s ease;

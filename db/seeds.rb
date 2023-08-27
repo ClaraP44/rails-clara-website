@@ -82,8 +82,6 @@ Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/
 
 
 
-
-
 NoiseImpulsion = Project.create!(
   categories: [Graphic_design],
   name: "Noise Impulsion",

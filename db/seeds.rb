@@ -88,7 +88,7 @@ NoiseImpulsion = Project.create!(
   year: 2023,
   client: "Noise Impulsion",
   team: "",
-  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal responsables. L'objectif était de créer une charte graphique pour Instagram.",
+  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -119,8 +119,9 @@ Léapicota = Project.create!(
   name: "Léapicota",
   year: 2022,
   client: "Léa PICOT",
-  team: "",
-  description: "Léa PICOT alias Léapicota est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi.",
+  team: "Léa PICOT",
+  description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
+  web_languages: [HTML_CSS]
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -134,7 +135,7 @@ NoiseImpulsion2 = Project.create!(
   year: 2022,
   client: "Noise Impulsion",
   team: "",
-  description: ".",
+  description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
@@ -148,7 +149,8 @@ STDevelopments = Project.create!(
   year: 2022,
   client: "ST Developments",
   team: "",
-  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress.",
+  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
+  web_languages: [HTML_CSS]
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))

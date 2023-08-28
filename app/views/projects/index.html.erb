@@ -9,7 +9,10 @@
         <%= link_to project_path(project), class: "image-link" do %>
           <div class="image-container-projects">
             <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+            <%# PROJECT'S NAME %>
             <h2 class="image-text-projects"><%= project.name %></h2>
+            <%# PROJECT CATEGORY %>
+            <p class="image-category-projects"><%= project.categories.first.name %></p>
           </div>
         <% end %>
 

@@ -124,8 +124,8 @@ Léapicota = Project.create!(
   web_languages: [HTML_CSS]
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-Léapicota.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("/home/clara/code/ClaraP44/rails-clara-website/db/seeds_pics/projects/leapicota/leapicota.png"))
+Léapicota.photo.attach(io: file, filename: "leapicota.jpg", content_type: "image/png")
 
 
 

@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 require 'net/http'
 
 puts "Cleaning database..."
@@ -66,6 +67,7 @@ puts "Creating projects"
 # PROJECTS
 
 puts "Creating project Geocool"
+
 Geocool = Project.create!(
   categories: [Web_development, Graphic_design],
   name: "Geocool",
@@ -118,7 +120,7 @@ AirPasSoft.save!
 
 
 
-puts "Creating project AirPasSoft"
+puts "Creating project Léapicota"
 Léapicota = Project.create!(
   categories: [Wordpress],
   name: "Léapicota",

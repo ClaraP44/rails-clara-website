@@ -8,7 +8,7 @@
         <%= link_to project_path(project), class: "image-link" do %>
           <div class="image-container-projects">
             <% if project.photo.attached? %>
-              <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+              <%= cl_image_tag project.photo.key, width: 330, height: 330, class: "object-fit-cover" %>
             <% else %>
               <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 330, height: 330, crop: :fill) %>
             <% end %>

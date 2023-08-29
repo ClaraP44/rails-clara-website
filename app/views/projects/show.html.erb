@@ -2,9 +2,9 @@
 
   <%# IMAGE HERE %>
   <% if @project.photo.attached? %>
-    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill, class: "main-img-project" %>
+    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, class: "object-fit-cover" %>
   <% else %>
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, crop: :fill) %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, class: "object-fit-cover") %>
   <% end %>
 
   <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>

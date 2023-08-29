@@ -69,82 +69,82 @@ puts "Creating projects"
 
 # PROJECTS
 
-Geocool = Project.create!(
-  categories: [Web_development, Graphic_design],
-  name: "Geocool",
-  year: 2023,
-  client: "",
-  team: "Vincent HELPIN\nAlmis LIPON",
-  description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations.",
-  web_languages: [Ruby, HTML_CSS, Javascript]
-)
+# Geocool = Project.create!(
+#   categories: [Web_development, Graphic_design],
+#   name: "Geocool",
+#   year: 2023,
+#   client: "",
+#   team: "Vincent HELPIN\nAlmis LIPON",
+#   description: "Adressée plus particulièrement aux professionnels du bâtiment, Geocool est une application permettant de réaliser des études de faisabilité pour la construction de puits climatiques. Nous avons développé l'application avec Ruby on Rails et avons utilisé d'autres langages web comme Javascript et Python. J'étais responsable front-end sur ce projet : le défi principal fut de rendre ce domaine très technique abordable à tous par un design épuré, tout en évitant le trop plein d'informations.",
+#   web_languages: [Ruby, HTML_CSS, Javascript]
+# )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/geocool.jpg"))
-Geocool.photo.attach(io: file, filename: "geocool.jpg", content_type: "image/jpeg")
-
-
-
-NoiseImpulsion = Project.create!(
-  categories: [Graphic_design],
-  name: "Noise Impulsion",
-  year: 2023,
-  client: "Noise Impulsion",
-  team: "",
-  description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
-)
-
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-NoiseImpulsion.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/geocool.jpg"))
+# Geocool.photo.attach(io: file, filename: "geocool.jpg", content_type: "image/jpeg")
 
 
 
-AirPasSoft = Project.create!(
-  categories: [Web_development, Graphic_design],
-  name: "Air pas Soft",
-  year: 2023,
-  client: "",
-  team: "Vincent HELPIN
-  Almis LIPON",
-  description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli",
-  web_languages: [Ruby, HTML_CSS, Javascript]
-)
+# NoiseImpulsion = Project.create!(
+#   categories: [Graphic_design],
+#   name: "Noise Impulsion",
+#   year: 2023,
+#   client: "Noise Impulsion",
+#   team: "",
+#   description: "Noise Impulsion est une association nantaise avec pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
+# )
 
-# AirPasSoft.web_languages << Ruby
-
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+# NoiseImpulsion.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
 
 
 
-Léapicota = Project.create!(
-  categories: [Wordpress],
-  name: "Léapicota",
-  year: 2022,
-  client: "Léa PICOT",
-  team: "Léa PICOT",
-  description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
-  web_languages: [HTML_CSS]
-)
+# AirPasSoft = Project.create!(
+#   categories: [Web_development, Graphic_design],
+#   name: "Air pas Soft",
+#   year: 2023,
+#   client: "",
+#   team: "Vincent HELPIN
+#   Almis LIPON",
+#   description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli",
+#   web_languages: [Ruby, HTML_CSS, Javascript]
+# )
 
-cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
-cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
-cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
-Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
-Léapicota.save!
+# # AirPasSoft.web_languages << Ruby
+
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+# AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
 
 
 
-NoiseImpulsion2 = Project.create!(
-  categories: [Video_editing],
-  name: "Recyclage de Metal Rouillé",
-  year: 2022,
-  client: "Noise Impulsion",
-  team: "",
-  description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
-)
+# Léapicota = Project.create!(
+#   categories: [Wordpress],
+#   name: "Léapicota",
+#   year: 2022,
+#   client: "Léa PICOT",
+#   team: "Léa PICOT",
+#   description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
+#   web_languages: [HTML_CSS]
+# )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-NoiseImpulsion2.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+# cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
+# cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
+# cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
+# Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
+# Léapicota.save!
+
+
+
+# NoiseImpulsion2 = Project.create!(
+#   categories: [Video_editing],
+#   name: "Recyclage de Metal Rouillé",
+#   year: 2022,
+#   client: "Noise Impulsion",
+#   team: "",
+#   description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
+# )
+
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+# NoiseImpulsion2.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
 
 
 
@@ -158,11 +158,8 @@ STDevelopments = Project.create!(
   web_languages: [HTML_CSS]
 )
 
-cloudinary_url_stdev = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327672/main_image_st_developments_2_ojvdr2.jpg'
-cloudinary_uri_stdev = URI.parse(cloudinary_url_stdev)
-cloudinary_image_stdev = Net::HTTP.get(cloudinary_uri_stdev)
-STDevelopments.photo.attach(io: StringIO.new(cloudinary_image_stdev), filename: 'stdevelopments.jpg')
-STDevelopments.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/stdevelopments.jpg"))
+STDevelopments.photo.attach(io: file, filename: "stdevelopments.jpg", content_type: "image/jpeg")
 
 
 

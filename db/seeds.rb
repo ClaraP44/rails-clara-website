@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require 'net/http'
+
 puts "Cleaning database..."
 ProjectWebLanguage.destroy_all
 Project.destroy_all
@@ -77,8 +79,8 @@ Geocool = Project.create!(
   web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-Geocool.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/geocool.jpg"))
+Geocool.photo.attach(io: file, filename: "geocool.jpg", content_type: "image/jpeg")
 
 
 
@@ -124,8 +126,11 @@ Léapicota = Project.create!(
   web_languages: [HTML_CSS]
 )
 
-file = File.open(Rails.root.join("/home/clara/code/ClaraP44/rails-clara-website/db/seeds_pics/projects/leapicota/leapicota.png"))
-Léapicota.photo.attach(io: file, filename: "leapicota.jpg", content_type: "image/png")
+cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
+cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
+cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
+Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
+Léapicota.save!
 
 
 
@@ -153,8 +158,11 @@ STDevelopments = Project.create!(
   web_languages: [HTML_CSS]
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-STDevelopments.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+cloudinary_url_stdev = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327672/main_image_st_developments_2_ojvdr2.jpg'
+cloudinary_uri_stdev = URI.parse(cloudinary_url_stdev)
+cloudinary_image_stdev = Net::HTTP.get(cloudinary_uri_stdev)
+STDevelopments.photo.attach(io: StringIO.new(cloudinary_image_stdev), filename: 'stdevelopments.jpg')
+STDevelopments.save!
 
 
 

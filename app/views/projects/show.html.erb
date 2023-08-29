@@ -1,7 +1,7 @@
 <div class="container background-light-red padding-bottom-150px">
 
   <%# IMAGE HERE %>
-  <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill %>
+  <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill, class: "main-img-project" %>
 
 
   <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>

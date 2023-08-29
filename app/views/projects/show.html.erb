@@ -1,8 +1,11 @@
 <div class="container background-light-red padding-bottom-150px">
 
   <%# IMAGE HERE %>
-  <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill, class: "main-img-project" %>
-
+  <% if @project.photo.attached? %>
+    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, crop: :fill, class: "main-img-project" %>
+  <% else %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, crop: :fill) %>
+  <% end %>
 
   <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>
 

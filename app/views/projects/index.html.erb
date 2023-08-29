@@ -2,15 +2,19 @@
   <h1 class="h1-light-red text-align-center padding-top-80px padding-bottom-50px">PROJETS</h1>
 
   <div class="columns-3">
+
     <% @projects.each do |project| %>
-
       <div class="img-vignette-projects">
-
         <%= link_to project_path(project), class: "image-link" do %>
           <div class="image-container-projects">
-            <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+            <% if project.photo.attached? %>
+              <%= cl_image_tag project.photo.key, width: 330, height: 330, crop: :fill %>
+            <% else %>
+              <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 330, height: 330, crop: :fill) %>
+            <% end %>
             <%# PROJECT'S NAME %>
             <h2 class="image-text-projects"><%= project.name %></h2>
+
             <%# PROJECT CATEGORY %>
 
             <!--
@@ -19,9 +23,7 @@
 
           </div>
         <% end %>
-
       </div>
-
     <% end %>
 
   </div>

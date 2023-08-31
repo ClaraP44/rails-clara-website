@@ -30,9 +30,13 @@
 }
 
 .photo-clara {
-  width: 425px;
-  height: 480px;
-  background-color: black;
+
+  img {
+    background-color: black;
+    width: 425px;
+    height: 480px;
+    object-fit: cover;
+  }
 }
 
 .h2-homepage {

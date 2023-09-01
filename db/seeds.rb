@@ -114,8 +114,8 @@ AirPasSoft = Project.create!(
 
 # AirPasSoft.web_languages << Ruby
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-AirPasSoft.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/airpassoft.jpg"))
+AirPasSoft.photo.attach(io: file, filename: "airpassoft.jpg", content_type: "image/jpeg")
 AirPasSoft.save!
 
 

@@ -5,14 +5,46 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="utf-8">
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+  />
 
   <style>
 
+  .background-light-red {
+    background: url('https://res.cloudinary.com/drb37tawz/image/upload/v1693253966/Rectangle_22_byys18.jpg');
+    min-height: calc(100vh - 80px);
+  }
+
+  body, p, h1 {
+    margin: 0!important;
+  }
+
+  a {
+    color: #E94B4B;
+    border: 1px solid #E94B4B;
+    border-radius: 20px;
+    padding-block: 8px;
+    padding-inline: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #e94b4b5b;
+    border: 1px solid #e94b4b5b;
+    transition: border 0.5s ease;
+    transition: color 0.2s ease;
+  }
+
+
   .container {
-    padding-top: 90px;
+    padding-top: 80px;
     background-color: #ffffff;
     text-align: center;
     font-family: 'Poppins', arial, sans-serif;
@@ -20,18 +52,30 @@
 
   h1 {
     font-family: 'Jockey One', sans-serif;
+    font-size: 100px;
+    color: rgba(233, 75, 75, 0.22);
+    font-weight: 400;
+    padding-top: 210px;
+    padding-bottom: 40px;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
   }
 
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/404.html -->
 
-  <div class="container">
-    <h1>404 - PAGE NON TROUVÉE</h1>
-    <p>La page que vous recherchez ne semble pas exister.</p>
-    <a href="https://www.clarapecot.fr">Accueil</a>
+  <div class="container background-light-red">
+
+    <h1>ERREUR 404</h1>
+    <p>Oups, la page recherchée n’a pas été trouvée !</p>
+    <a href="https://www.clarapecot.fr">accueil</a>
+
   </div>
 
 </body>

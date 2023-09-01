@@ -94,8 +94,8 @@ NoiseImpulsion = Project.create!(
   description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-NoiseImpulsion.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
+NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
 NoiseImpulsion.save!
 
 
@@ -149,8 +149,8 @@ Rmr = Project.create!(
   description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-Rmr.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/rmr.jpg"))
+Rmr.photo.attach(io: file, filename: "rmr.jpg", content_type: "image/jpeg")
 Rmr.save!
 
 

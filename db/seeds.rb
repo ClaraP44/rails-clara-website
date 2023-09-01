@@ -108,7 +108,7 @@ AirPasSoft = Project.create!(
   client: "",
   team: "Vincent HELPIN
   Almis LIPON",
-  description: "Le projet Air pas Soft est un Air bnb détourné ! + expliquer ce que propose l'appli",
+  description: "Projet réalisé en équipe, l'idée était de créer une application Ruby on Rails sur le modèle d'Airbnb. Dans un monde post-apocalytique, Air pas Soft permet de louer des armes à des particuliers.",
   web_languages: [Ruby, HTML_CSS, Javascript]
 )
 

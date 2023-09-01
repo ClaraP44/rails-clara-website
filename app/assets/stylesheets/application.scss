@@ -27,11 +27,12 @@ body {
 
 hr {
   border: 0.5px solid white;
-  padding-inline: 345px;
+  padding-inline: 20%;
 }
 
 .container {
-  padding-inline: 345px;
+  // padding-inline: 345px;
+  padding-inline: 20%;
 }
 
 .display-block {
@@ -148,7 +149,7 @@ hr {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding-inline: 20x;
+    padding-inline: 30px;
   }
 }
 

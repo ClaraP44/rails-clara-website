@@ -138,3 +138,20 @@ hr {
 .padding-top-210px {
   padding-top: 210px;
 }
+
+// RESPONSIVE
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 20x;
+  }
+}
+
+@media (max-width: 480px) {
+
+}

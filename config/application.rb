@@ -32,5 +32,26 @@ module RailsClaraWebsite
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    Cloudinary.config do |config|
+      config.cloud_name = ENV["CLOUDINARY_CLOUD_NAME"]
+      config.api_key = ENV["CLOUDINARY_API_KEY"]
+      config.api_secret = ENV["CLOUDINARY_API_SECRET"]
+    end
+
+    cloudinary_credentials = Rails.application.credentials.dig(:cloudinary)
+
+    if cloudinary_credentials
+      Cloudinary.config do |config|
+        config.cloud_name = cloudinary_credentials[:cloud_name]
+        config.api_key = cloudinary_credentials[:api_key]
+        config.api_secret = cloudinary_credentials[:api_secret]
+      end
+    else
+      # Gérer l'absence de configuration Cloudinary
+      raise "Les identifiants Cloudinary ne sont pas configurés correctement."
+    end
+
+
   end
 end

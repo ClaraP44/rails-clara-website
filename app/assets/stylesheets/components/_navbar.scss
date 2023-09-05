@@ -6,11 +6,19 @@
   justify-content: center;
   z-index: 1;
   position: relative;
+  display: flex;
+  align-items: center;
 
   a:hover {
     text-decoration: none;
     color: #E94B4B;
   }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none
 }
 
 .nav-link {
@@ -29,7 +37,10 @@
   color: #E94B4B;
 }
 
-// TEST JS
+// JS
 .active {
   color: #E94B4B;
 }
+
+
+// TEST MENU HAMBURGER

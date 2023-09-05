@@ -1,3 +1,4 @@
+// CHANGE COLOR WHEN NAV-LINK CLICKED
 document.addEventListener("DOMContentLoaded", function () {
   var currentPath = window.location.pathname;
   var navLinks = document.querySelectorAll(".nav-link");

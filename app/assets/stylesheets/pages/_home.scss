@@ -2,8 +2,10 @@
   background: url('https://res.cloudinary.com/drb37tawz/image/upload/v1692708741/background-red_rwvpxx.png');
 }
 
-.container-intro {
+.intro {
   padding-block: 170px;
+  display: flex;
+  justify-content: space-between;
 
   h1 {
     color: rgba(255, 255, 255, 0.50);;
@@ -20,7 +22,7 @@
   }
 }
 
-.container-intro-text {
+.text-intro {
   width: 504px;
   padding-top: 100px;
 
@@ -32,7 +34,6 @@
 .photo-clara {
 
   img {
-    background-color: black;
     width: 425px;
     height: 480px;
     object-fit: cover;

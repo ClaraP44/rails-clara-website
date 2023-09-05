@@ -5,6 +5,12 @@
       <% end %>
   </div>
 
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+
+
   <ul class="nav-links">
     <li><%= link_to "À PROPOS", about_path, class: "nav-link #{active_class(about_path)}" %></li>
     <li><%= link_to "PROJETS", projects_path, class: "nav-link #{active_class(projects_path)}" %></li>
@@ -12,3 +18,24 @@
   </ul>
 
 </div>
+
+
+  <%# test %>
+  <!--
+  <section class="navbar">
+    <div>
+      Logo Here
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+
+    <ul class="nav-links">
+      <li><%= link_to "À PROPOS", about_path, class: "nav-link #{active_class(about_path)}" %></li>
+      <li><%= link_to "PROJETS", projects_path, class: "nav-link #{active_class(projects_path)}" %></li>
+      <li><%= link_to "CONTACT", contact_path, class: "nav-link #{active_class(contact_path)}" %></li>
+    </ul>
+  </section>
+  -->

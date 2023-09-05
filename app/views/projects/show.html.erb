@@ -2,16 +2,16 @@
 
   <%# IMAGE HERE %>
   <% if @project.photo.attached? %>
-    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, class: "object-fit-cover" %>
+    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, class: "project-image" %>
   <% else %>
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, class: "object-fit-cover") %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, class: "project-image") %>
   <% end %>
 
-  <h1 class="h1-light-red text-align-center padding-bottom-50px"><%= @project.name.upcase %></h1>
+  <h1 class="project-title h1-light-red"><%= @project.name.upcase %></h1>
 
-  <div class="container-infos-and-description-project flex-container">
+  <div class="project-intro">
 
-    <div class="container-infos-project width-50percent">
+    <div class="project-data width-50percent">
 
       <%# INFOS  PROJECT%>
       <div>
@@ -58,7 +58,7 @@
     </div>
 
     <%# DESCRIPTION %>
-    <div class="container-description-project">
+    <div class="project-description">
       <p><%= @project.description %></p>
     </div>
 

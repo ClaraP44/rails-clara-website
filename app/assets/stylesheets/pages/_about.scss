@@ -1,19 +1,24 @@
 .container-page-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+
   a {
     display: block;
     text-align: center;
     padding-top: 20px;
   }
-}
-
-.about-title {
-  text-align: center;
-  padding-top: 210px;
-  padding-bottom: 40px;
 
   p {
     text-align: center;
   }
+}
+
+.about-title {
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 
@@ -21,10 +26,6 @@
 // RESPONSIVE
 @media screen and (max-width: 480px) {
   .about-title {
-    padding-top: 40px;
-  }
-
-  .container-page-about {
-    padding-bottom: 50px;
+    padding-top: 0px;
   }
 }

@@ -1,7 +1,48 @@
-.container-page-about {
+.container-page-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
 
+.contact-title {
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 .p-padding-top-045em {
   padding-top: 0.45em;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-email {
+  display: flex;
+}
+
+.contact-social-media {
+  display: flex;
+  padding-left: 140px;
+}
+
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+  .contact-infos {
+    display: block;
+  }
+
+  .contact-social-media {
+    padding-left: 0px;
+    padding-top: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-title {
+    padding-top: 0px;
+  }
 }

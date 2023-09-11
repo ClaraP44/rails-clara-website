@@ -146,6 +146,12 @@
       height: auto;
     }
   }
+
+  .projects-homepage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -164,11 +170,6 @@
   .text-intro {
     padding-block: 5em;
     width: auto;
-  }
-
-  .projects-homepage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .container-web-techno-part {

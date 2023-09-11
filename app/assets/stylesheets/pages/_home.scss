@@ -41,6 +41,8 @@
   }
 }
 
+
+// PROJETS
 .h2-homepage {
   font-size: 100px;
   color: #FFFFFF2B;
@@ -54,6 +56,9 @@
   padding-bottom: 20px;
 }
 
+
+
+// COMPETENCES
 .container-icones-competences {
   padding-bottom: 130px;
 
@@ -155,7 +160,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    gap: 15px;
+    row-gap: 15px;
+  }
+
+  .btn-projects-homepage {
+    display: flex;
+    justify-content: center;
   }
 }
 

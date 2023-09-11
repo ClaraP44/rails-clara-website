@@ -19,6 +19,8 @@
     font-size: 55px;
     font-weight: 400;
     padding-bottom: 20px;
+    line-height: 1em;
+    padding-top: 10px;
   }
 }
 
@@ -44,6 +46,12 @@
   color: #FFFFFF2B;
   font-weight: 400;
   padding-bottom: 50px;
+}
+
+.projects-homepage {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .container-icones-competences {
@@ -142,9 +150,33 @@
 
   .text-intro {
     padding-block: 5em;
+    width: auto;
   }
+
+  .projects-homepage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media screen and (max-width: 480px) {
+  .intro {
+    h1 {
+      font-size: 20px;
+    }
 
+    h2 {
+      font-size: 35px;
+    }
+  }
+
+  .projects-homepage {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .h2-homepage {
+    font-size: 60px;
+  }
 }

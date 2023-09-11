@@ -161,11 +161,14 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     row-gap: 15px;
+    width: min-content;
+    margin: 0 auto;
   }
 
   .btn-projects-homepage {
     display: flex;
     justify-content: center;
+    padding-top: 15px;
   }
 }
 

@@ -32,10 +32,9 @@
 }
 
 .photo-clara {
-
   img {
-    width: 425px;
-    height: 480px;
+    max-width: 425px;
+    max-height: 480px;
     object-fit: cover;
   }
 }
@@ -114,4 +113,38 @@
 
 .image-link:hover .image-text-projects-homepage {
   opacity: 1;
+}
+
+
+
+// RESPONSIVE
+@media screen and (max-width: 1050px) {
+  .photo-clara {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    padding-block: 0px;
+    display: block;
+    text-align: center;
+  }
+
+  .photo-clara {
+    img {
+      display: none;
+    }
+  }
+
+  .text-intro {
+    padding-block: 5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
 }

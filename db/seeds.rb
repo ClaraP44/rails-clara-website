@@ -108,7 +108,7 @@ NoiseImpulsion.save!
 image_paths_noiseimpulsion = ['moodboard.jpg', 'feed-instagram.jpg']
 
 image_paths_noiseimpulsion.each do |image_path|
-  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noiseimpulsion', image_path))
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noise_impulsion', image_path))
   NoiseImpulsion.project_images.create(image: uploaded_image['secure_url'])
 end
 

@@ -10,10 +10,8 @@
 require 'net/http'
 
 puts "Cleaning database..."
-# [ProjectWebLanguage, Project, Category, WebLanguage].each(&:destroy_all)
-[ProjectWebLanguage, Project, Category, WebLanguage].each do |model|
-  model.delete_all if model.table_exists?
-end
+[ProjectWebLanguage, Project, Category, WebLanguage].each(&:destroy_all)
+
 
 
 puts "Creating categories"
@@ -93,58 +91,72 @@ end
 
 
 
-puts "Creating project Noise Impulsion"
-NoiseImpulsion = Project.create!(
-  categories: [Graphic_design],
-  name: "Noise Impulsion",
+# puts "Creating project Noise Impulsion"
+# NoiseImpulsion = Project.create!(
+#   categories: [Graphic_design],
+#   name: "Noise Impulsion",
+#   year: 2023,
+#   client: "Noise Impulsion",
+#   team: "",
+#   description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
+# )
+
+# file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
+# NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
+# NoiseImpulsion.save!
+
+
+
+puts "Creating project AirPasSoft"
+AirPasSoft = Project.create!(
+  categories: [Web_development, Graphic_design],
+  name: "Air pas Soft",
   year: 2023,
-  client: "Noise Impulsion",
-  team: "",
-  description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
+  client: "",
+  team: "Vincent HELPIN
+  Almis LIPON",
+  description: "Projet réalisé en équipe, l'idée était de créer une application Ruby on Rails sur le modèle d'Airbnb en 1 semaine. Dans un monde post-apocalytique où la violence fait rage, Air pas Soft permet de louer des armes à des particuliers. Les utilisateurs en quête d'une arme peuvent ainsi voir toutes les armes disponibles en location, en louer une pour une durée déterminée et voir leurs récapitulatifs de commande. En tant que loueur, la personne peut accepter ou non une demande de location ou encore ajouter une arme sur le marché.",
+  web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
-NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
-NoiseImpulsion.save!
+# AirPasSoft.web_languages << Ruby
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/airpassoft.jpg"))
+AirPasSoft.photo.attach(io: file, filename: "airpassoft.jpg", content_type: "image/jpeg")
+AirPasSoft.save!
+
+image_paths_airpassoft = ['homepage.jpg', 'weapons.jpg', 'weapon.jpg', 'myweapons.jpg', 'newweapon.jpg']
+
+image_paths_airpassoft.each do |image_path|
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/airpassoft', image_path))
+  AirPasSoft.project_images.create(image: uploaded_image['secure_url'])
+end
 
 
 
-# puts "Creating project AirPasSoft"
-# AirPasSoft = Project.create!(
-#   categories: [Web_development, Graphic_design],
-#   name: "Air pas Soft",
-#   year: 2023,
-#   client: "",
-#   team: "Vincent HELPIN
-#   Almis LIPON",
-#   description: "Projet réalisé en équipe, l'idée était de créer une application Ruby on Rails sur le modèle d'Airbnb en 1 semaine. Dans un monde post-apocalytique où la violence fait rage, Air pas Soft permet de louer des armes à des particuliers. Les utilisateurs en quête d'une arme peuvent ainsi voir toutes les armes disponibles en location, en louer une pour une durée déterminée et voir leurs récapitulatifs de commande. En tant que loueur, la personne peut accepter ou non une demande de location ou encore ajouter une arme sur le marché.",
-#   web_languages: [Ruby, HTML_CSS, Javascript]
-# )
+puts "Creating project Léapicota"
+Léapicota = Project.create!(
+  categories: [Wordpress],
+  name: "Léapicota",
+  year: 2022,
+  client: "Léa PICOT",
+  team: "Léa PICOT",
+  description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
+  web_languages: [HTML_CSS]
+)
 
-# # AirPasSoft.web_languages << Ruby
+cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
+cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
+cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
+Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
+Léapicota.save!
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/airpassoft.jpg"))
-# AirPasSoft.photo.attach(io: file, filename: "airpassoft.jpg", content_type: "image/jpeg")
-# AirPasSoft.save!
+image_paths_leapicota = ['realisations.jpg', 'a-propos.jpg', 'cv.jpg', 'contact.jpg']
 
-
-
-# puts "Creating project Léapicota"
-# Léapicota = Project.create!(
-#   categories: [Wordpress],
-#   name: "Léapicota",
-#   year: 2022,
-#   client: "Léa PICOT",
-#   team: "Léa PICOT",
-#   description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
-#   web_languages: [HTML_CSS]
-# )
-
-# cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
-# cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
-# cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
-# Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
-# Léapicota.save!
+image_paths_leapicota.each do |image_path|
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/leapicota', image_path))
+  Léapicota.project_images.create(image: uploaded_image['secure_url'])
+end
 
 
 

@@ -162,7 +162,7 @@ STDevelopments = Project.create!(
   year: 2022,
   client: "ST Developments",
   team: "",
-  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
+  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group. Les utilisateurs peuvent, notamment, en apprendre plus sur les prestations proposées, voir les franchises clientes et postuler en tant que futur(e) franchisé(e).",
   web_languages: [HTML_CSS]
 )
 

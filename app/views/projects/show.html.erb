@@ -64,6 +64,14 @@
 
   </div>
 
+
+  <% @project.project_images.each do |image| %>
+    <%= image_tag image.image if image.image? %>
+  <% end %>
+
+
+
+
   <%# <hr>
 
   <div>

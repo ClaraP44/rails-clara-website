@@ -87,7 +87,9 @@
 }
 
 .web-techno-names {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
   padding-top: 1em;
   padding-left: 50px;
 }
@@ -203,7 +205,8 @@
 
   .web-techno-names {
     padding-left: 0px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

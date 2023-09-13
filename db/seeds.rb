@@ -86,7 +86,7 @@ image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'r
 
 image_paths.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/geocool', image_path))
-  project_image = Geocool.project_images.create(image: uploaded_image['secure_url'])
+  Geocool.project_images.create(image: uploaded_image['secure_url'])
 end
 
 
@@ -167,19 +167,20 @@ end
 
 
 
-# puts "Creating project Recyclage de Metal Rouillé"
-# Rmr = Project.create!(
-#   categories: [Video_editing],
-#   name: "Recyclage de Metal Rouillé",
-#   year: 2022,
-#   client: "Noise Impulsion",
-#   team: "",
-#   description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
-# )
+puts "Creating project Recyclage de Metal Rouillé"
+Rmr = Project.create!(
+  categories: [Video_editing],
+  name: "Recyclage de Metal Rouillé",
+  year: 2022,
+  client: "Noise Impulsion",
+  team: "",
+  description: "'Recyclage de Metal Rouillé' est le nom d'un évènement musical organisé par l'association Noise Impulsion, à l'esprit rock éco-solidaire. L'évènement met en lumière des groupes locaux de rock/metal lors d'une soirée-concert. La vidéo a été réalisée avec After Effects et en utilisant un template de Motion Array.",
+  youtube_url: "https://www.youtube.com/embed/y80XRItfnUA"
+)
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/rmr.jpg"))
-# Rmr.photo.attach(io: file, filename: "rmr.jpg", content_type: "image/jpeg")
-# Rmr.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/rmr.jpg"))
+Rmr.photo.attach(io: file, filename: "rmr.jpg", content_type: "image/jpeg")
+Rmr.save!
 
 
 
@@ -191,7 +192,7 @@ STDevelopments = Project.create!(
   client: "ST Developments",
   team: "",
   description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Les utilisateurs peuvent notamment en apprendre plus sur les prestations proposées, voir les franchises clientes et postuler en tant que futur(e) franchisé(e). Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
-  web_languages: [HTML_CSS]
+  web_languages: [HTML_CSS],
 )
 
 file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/stdevelopments.jpg"))

@@ -93,20 +93,19 @@ end
 
 
 
+puts "Creating project Noise Impulsion"
+NoiseImpulsion = Project.create!(
+  categories: [Graphic_design],
+  name: "Noise Impulsion",
+  year: 2023,
+  client: "Noise Impulsion",
+  team: "",
+  description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
+)
 
-# puts "Creating project Noise Impulsion"
-# NoiseImpulsion = Project.create!(
-#   categories: [Graphic_design],
-#   name: "Noise Impulsion",
-#   year: 2023,
-#   client: "Noise Impulsion",
-#   team: "",
-#   description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
-# )
-
-# file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
-# NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
-# NoiseImpulsion.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
+NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
+NoiseImpulsion.save!
 
 
 

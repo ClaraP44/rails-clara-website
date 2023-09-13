@@ -64,13 +64,13 @@
 
   </div>
 
-
-  <% @project.project_images.each do |image| %>
-    <%= image_tag image.image if image.image? %>
-  <% end %>
-
-
-
+  <div class="project-images">
+    <% @project.project_images.each do |image| %>
+      <div class="project-image-alone">
+      <%= image_tag image.image if image.image? %>
+      </div>
+    <% end %>
+  </div>
 
   <%# <hr>
 

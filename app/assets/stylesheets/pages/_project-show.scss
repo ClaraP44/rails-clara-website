@@ -1,4 +1,6 @@
 .container-page-project-show {
+  padding-bottom: 150px;
+
   h1 {
     padding-top: 40px;
   }
@@ -37,6 +39,38 @@
 
     h2 {
       width: 35%;
+    }
+
+  }
+
+}
+
+
+
+// RESPONSIVE
+
+@media screen and (max-width: 768px) {
+  .project-intro {
+    display: block;
+  }
+
+  .project-description {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .project-data {
+    width: 100%;
+
+    div {
+      display: flex;
+      padding-bottom: 15px;
+
+      h2 {
+        width: 50%;
+      }
+
     }
 
   }

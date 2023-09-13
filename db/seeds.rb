@@ -108,7 +108,7 @@ AirPasSoft = Project.create!(
   client: "",
   team: "Vincent HELPIN
   Almis LIPON",
-  description: "Projet réalisé en équipe, l'idée était de créer une application Ruby on Rails sur le modèle d'Airbnb. Dans un monde post-apocalytique, Air pas Soft permet de louer des armes à des particuliers.",
+  description: "Projet réalisé en équipe, l'idée était de créer une application Ruby on Rails sur le modèle d'Airbnb en 1 semaine. Dans un monde post-apocalytique où la violence fait rage, Air pas Soft permet de louer des armes à des particuliers. Les utilisateurs en quête d'une arme peuvent ainsi voir toutes les armes disponibles en location, en louer une pour une durée déterminée et voir leurs récapitulatifs de commande. En tant que loueur, la personne peut accepter ou non une demande de location ou encore ajouter une arme sur le marché.",
   web_languages: [Ruby, HTML_CSS, Javascript]
 )
 

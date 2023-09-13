@@ -91,19 +91,26 @@ end
 
 
 
-# puts "Creating project Noise Impulsion"
-# NoiseImpulsion = Project.create!(
-#   categories: [Graphic_design],
-#   name: "Noise Impulsion",
-#   year: 2023,
-#   client: "Noise Impulsion",
-#   team: "",
-#   description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
-# )
+puts "Creating project Noise Impulsion"
+NoiseImpulsion = Project.create!(
+  categories: [Graphic_design],
+  name: "Noise Impulsion",
+  year: 2023,
+  client: "Noise Impulsion",
+  team: "",
+  description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables et agréables à l'oeil pour notre communauté.",
+)
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
-# NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
-# NoiseImpulsion.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
+NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
+NoiseImpulsion.save!
+
+image_paths_noiseimpulsion = ['moodboard.jpg', 'feed-instagram.jpg']
+
+image_paths_noiseimpulsion.each do |image_path|
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noiseimpulsion', image_path))
+  NoiseImpulsion.project_images.create(image: uploaded_image['secure_url'])
+end
 
 
 
@@ -176,21 +183,27 @@ end
 
 
 
-# puts "Creating project STDevelopments"
-# STDevelopments = Project.create!(
-#   categories: [Wordpress],
-#   name: "ST Developments",
-#   year: 2022,
-#   client: "ST Developments",
-#   team: "",
-#   description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Les utilisateurs peuvent notamment en apprendre plus sur les prestations proposées, voir les franchises clientes et postuler en tant que futur(e) franchisé(e). Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
-#   web_languages: [HTML_CSS]
-# )
+puts "Creating project STDevelopments"
+STDevelopments = Project.create!(
+  categories: [Wordpress],
+  name: "ST Developments",
+  year: 2022,
+  client: "ST Developments",
+  team: "",
+  description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Les utilisateurs peuvent notamment en apprendre plus sur les prestations proposées, voir les franchises clientes et postuler en tant que futur(e) franchisé(e). Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
+  web_languages: [HTML_CSS]
+)
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/stdevelopments.jpg"))
-# STDevelopments.photo.attach(io: file, filename: "stdevelopments.jpg", content_type: "image/jpeg")
-# STDevelopments.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/stdevelopments.jpg"))
+STDevelopments.photo.attach(io: file, filename: "stdevelopments.jpg", content_type: "image/jpeg")
+STDevelopments.save!
 
+image_paths_stdevelopments = ['homepage.jpg', 'prestation.jpg', 'a-propos.jpg', 'clients.jpg', 'blog.jpg']
+
+image_paths_stdevelopments.each do |image_path|
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/stdevelopments', image_path))
+  STDevelopments.project_images.create(image: uploaded_image['secure_url'])
+end
 
 
 # puts "Creating project RapidCouture"

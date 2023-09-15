@@ -43,9 +43,9 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 plugin :tmp_restart
 
 # Activer HTTPS
-if ENV['RAILS_ENV'] == 'production'
-  ssl_bind '0.0.0.0', '443', {
-    key: '/path/to/your/ssl/key.pem',
-    cert: '/path/to/your/ssl/cert.pem'
-  }
-end
+# if ENV['RAILS_ENV'] == 'production'
+#   ssl_bind '0.0.0.0', '443', {
+#     key: '/path/to/your/ssl/key.pem',
+#     cert: '/path/to/your/ssl/cert.pem'
+#   }
+# end

@@ -201,12 +201,20 @@
 
   .container-web-techno-part {
     display: block;
+
+    p {
+      font-size: 16px;
+    }
   }
 
   .web-techno-names {
     padding-left: 0px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hr-footer {
+    margin-top: 80px;
   }
 }
 

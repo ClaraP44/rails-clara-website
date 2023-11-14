@@ -141,8 +141,9 @@ hr {
   .container {
     padding-inline: 30px;
   }
+
+  body {
+    position: fixed; /* Fixe le corps de la page en position pour éviter le défilement */
+  }
 }
 
-@media (max-width: 480px) {
-
-}

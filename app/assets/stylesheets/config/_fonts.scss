@@ -42,7 +42,7 @@ a:hover {
 
 // ANIMATIONS
 .lineUp {
-  animation: 1s anim-lineUp ease-out;
+  animation: 2s anim-lineUp ease-out;
 }
 @keyframes anim-lineUp {
   0% {
@@ -60,6 +60,16 @@ a:hover {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+
+.fade-in-text {
+  animation: fadeIn 0.8s;
+  -webkit-animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 

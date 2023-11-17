@@ -41,6 +41,11 @@
   }
 }
 
+.icone-chevron-down {
+  display: none;
+}
+
+
 
 // PROJETS
 .h2-homepage {
@@ -179,7 +184,8 @@
 
 @media screen and (max-width: 768px) {
   .intro {
-    padding-block: 0px;
+    padding-block: 0em;
+    padding-bottom: 4em;
     display: block;
     text-align: center;
   }
@@ -191,8 +197,15 @@
   }
 
   .text-intro {
-    padding-block: 10em;
+    padding-top: 10em;
     width: auto;
+  }
+
+  .icone-chevron-down {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding-bottom: 2em;
   }
 
   .container-icones-competences {

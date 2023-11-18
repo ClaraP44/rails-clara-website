@@ -6,7 +6,6 @@
   justify-content: center;
   z-index: 1;
   position: relative;
-  display: flex;
   align-items: center;
 
   a:hover {
@@ -37,6 +36,8 @@
   color: #E94B4B;
 }
 
+
+
 // JS
 .active {
   color: #E94B4B;
@@ -44,11 +45,7 @@
 
 
 
-
-
-
-
-// TEST MENU HAMBURGER
+// MENU HAMBURGER
 html, body {
   margin: 0;
   height: 100%;
@@ -57,19 +54,6 @@ html, body {
 * {
   box-sizing: border-box;
 }
-
-// .navbar {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: space-between;
-//   background-color: #00BAF0;
-//   background: linear-gradient(to left, #f46b45, #eea849);
-//   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-//   color: #FFF;
-//   height: 50px;
-//   padding: 1em;
-// }
 
 .nav-links {
   // display: flex;
@@ -133,6 +117,8 @@ html, body {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
+
+
 
 @media (max-width: 1200px) {
   .nav-link {

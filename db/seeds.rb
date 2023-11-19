@@ -66,6 +66,22 @@ puts "Creating projects"
 
 # PROJECTS
 
+# puts "Creating project Site personnel"
+# SitePersonnel = Project.create!(
+#   categories: [Web_development],
+#   name: "Site personnel",
+#   year: 2023,
+#   client: "",
+#   team: "",
+#   description: "...",
+# )
+
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+# SitePersonnel.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+# SitePersonnel.save!
+
+
+
 puts "Creating project Geocool"
 
 Geocool = Project.create!(

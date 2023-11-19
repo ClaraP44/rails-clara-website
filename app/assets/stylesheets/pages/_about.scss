@@ -5,22 +5,23 @@
   align-items: center;
   height: calc(100vh - 80px);
 
-  a {
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-    font-style: italic;
-    transition: color 0.3s ease;
-    text-decoration: none;
-  }
+  // a {
+  //   display: block;
+  //   text-align: center;
+  //   padding-top: 20px;
+  //   font-style: italic;
+  //   transition: color 0.3s ease;
+  //   text-decoration: none;
+  // }
 
-  a:hover {
-    color: #E94B4B;
-    transition: color 0.3s ease;
-  }
+  // a:hover {
+  //   color: #E94B4B;
+  //   transition: color 0.3s ease;
+  // }
 
   p {
     text-align: center;
+    padding-bottom: 1em;
   }
 }
 

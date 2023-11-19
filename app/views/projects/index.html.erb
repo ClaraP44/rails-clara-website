@@ -1,11 +1,10 @@
 <div class="container background-light-grey padding-bottom-150px">
   <h1 class="h1-light-red text-align-center padding-top-80px padding-bottom-50px fade-in-text">PROJETS</h1>
 
-  <div class="filter-form">
-    <%= form_tag(projects_path, method: :get) do %>
-      <%= label_tag 'category', 'Filtrer par catégorie:' %>
-      <%= select_tag 'category', options_for_select(@categories.pluck(:name), @selected_category), include_blank: true %>
-      <%= submit_tag 'Filtrer' %>
+  <div class="category-links">
+    <%= link_to 'Tous les projets', projects_path, class: ('selected' unless @selected_category.present?) %>
+    <% @categories.each do |category| %>
+      <%= link_to category.name, projects_path(category: category.name), class: ('selected' if category.name == @selected_category) %>
     <% end %>
   </div>
 

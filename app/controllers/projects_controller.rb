@@ -14,6 +14,4 @@ class ProjectsController < ApplicationController
       @next_project = Project.order(id: :asc).first
     end
   end
-
-
 end

@@ -1,3 +1,28 @@
+// FILTER SYSTEM
+.category-links {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-links a {
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.category-links a.selected {
+  color: #E94B4B;
+  border: 1px solid #E94B4B;
+}
+
+
+
+// PROJECTS
+
 .columns-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -30,9 +30,9 @@ Video_editing = Category.create!(
   name: "Montage vidéo"
 )
 
-Visual_identity = Category.create!(
-  name: "Identité visuelle"
-)
+# Visual_identity = Category.create!(
+#   name: "Identité visuelle"
+# )
 
 Wordpress = Category.create!(
   name: "Wordpress"

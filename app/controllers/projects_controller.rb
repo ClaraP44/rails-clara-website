@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
+
+    @categories = Category.all
+    @selected_category = params[:category]
+    @projects = @selected_category.present? ? Category.find_by(name: @selected_category).projects : Project.all
   end
 
   def show
@@ -10,5 +14,6 @@ class ProjectsController < ApplicationController
       @next_project = Project.order(id: :asc).first
     end
   end
+
 
 end

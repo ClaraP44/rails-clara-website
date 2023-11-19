@@ -1,9 +1,18 @@
 <div class="container background-light-grey padding-bottom-150px">
   <h1 class="h1-light-red text-align-center padding-top-80px padding-bottom-50px fade-in-text">PROJETS</h1>
 
+  <div class="filter-form">
+    <%= form_tag(projects_path, method: :get) do %>
+      <%= label_tag 'category', 'Filtrer par catégorie:' %>
+      <%= select_tag 'category', options_for_select(@categories.pluck(:name), @selected_category), include_blank: true %>
+      <%= submit_tag 'Filtrer' %>
+    <% end %>
+  </div>
+
   <div class="columns-3">
 
     <% @projects.each do |project| %>
+
       <div class="img-vignette-projects">
         <%= link_to project_path(project), class: "image-link" do %>
           <div class="image-container-projects">
@@ -27,5 +36,7 @@
     <% end %>
 
   </div>
+
+
 
 </div>

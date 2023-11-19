@@ -4,6 +4,7 @@
   margin-bottom: 2rem;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap
 }
 
 .category-links a {
@@ -28,6 +29,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   justify-items: center;
+  // width: min-content;
 }
 
 .img-vignette-projects {
@@ -41,6 +43,9 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+    // max-width: 100%;
+    // display: block;
+    // margin: 0 auto;
   }
 
   &:hover img {

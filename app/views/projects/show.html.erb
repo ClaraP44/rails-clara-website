@@ -78,11 +78,24 @@
 
 
 
-  <%# <hr>
+  <div class="next-project-part">
 
-  <div>
-    <p>Projet suivant</p>
+    <hr>
 
-  </div> %>
+    <div>
+      <div>
+        <h2 class="h2-red">Projet suivant</h2>
+      </div>
+
+      <div>
+        <% if @next_project %>
+          <%= link_to @next_project.name, project_path(@next_project) %>
+        <% else %>
+          <p>Il n'y a pas de projet suivant</p>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
 
 </div>

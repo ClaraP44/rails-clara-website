@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
   get '/pdf/:id', to: 'pdf#show', as: :pdf
 
-  resources :projects, only: %i[index show] 
+  resources :projects, only: %i[index show]
 end

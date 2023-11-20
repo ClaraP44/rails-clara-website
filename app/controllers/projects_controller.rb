@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
-
     @categories = Category.all
     @selected_category = params[:category]
     @projects = @selected_category.present? ? Category.find_by(name: @selected_category).projects : Project.all

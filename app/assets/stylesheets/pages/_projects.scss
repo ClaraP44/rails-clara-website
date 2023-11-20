@@ -13,6 +13,13 @@
   text-decoration: none;
   color: #ccc;
   border: 1px solid #ccc;
+  transition: color 0.3s ease;
+}
+
+.category-links a:hover {
+  color: #acacac;
+  border: 1px solid #acacac;
+  transition: color 0.3s ease;
 }
 
 .category-links a.selected {

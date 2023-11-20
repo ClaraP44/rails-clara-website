@@ -95,7 +95,6 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .columns-3 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -103,7 +102,11 @@
 }
 
 @media screen and (max-width: 480px) {
+  .category-links a {
+    font-size: 0.9em;
+  }
+
   .image-text-projects {
-    font-size: 18px;
+    font-size: 2em;
   }
 }

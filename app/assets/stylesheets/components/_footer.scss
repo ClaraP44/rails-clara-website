@@ -4,7 +4,8 @@
 
   >div {
     display: flex;
-  justify-content: space-between;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   h2 {
@@ -51,11 +52,22 @@
 
 @media screen and (max-width: 768px) {
   .footer {
+
+    >div {
     display: block;
     padding-bottom: 50px;
+    }
 
     h2 {
       font-size: 26px;
+    }
+
+    .email-footer {
+      padding-bottom: 10px
+    }
+
+    .credits-footer {
+      padding-top: 0px;
     }
   }
 

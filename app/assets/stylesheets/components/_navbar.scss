@@ -5,8 +5,12 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  position: relative;
+  // position: relative;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  background: white;
+  top: 0;
 
   a:hover {
     text-decoration: none;

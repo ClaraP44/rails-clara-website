@@ -168,10 +168,14 @@ Léapicota = Project.create!(
   web_languages: [HTML_CSS]
 )
 
-cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
-cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
-cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
-Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
+# cloudinary_url_leapicota = 'https://res.cloudinary.com/drb37tawz/image/upload/v1693327771/main_image_leapicota_bfq9qh.jpg'
+# cloudinary_uri_leapicota = URI.parse(cloudinary_url_leapicota)
+# cloudinary_image_leapicota = Net::HTTP.get(cloudinary_uri_leapicota)
+# Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
+# Léapicota.save!
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/leapicota/leapicota.webp"))
+Léapicota.photo.attach(io: file, filename: "leapicota.webp", content_type: "image/webp")
 Léapicota.save!
 
 image_paths_leapicota = ['realisations.jpg', 'a-propos.jpg', 'cv.jpg', 'contact.jpg']

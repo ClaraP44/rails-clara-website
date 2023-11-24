@@ -194,8 +194,8 @@ Rmr = Project.create!(
   youtube_url: "https://www.youtube.com/embed/y80XRItfnUA"
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/rmr.jpg"))
-Rmr.photo.attach(io: file, filename: "rmr.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/recyclage-de-metal-rouille.webp"))
+Rmr.photo.attach(io: file, filename: "recyclage-de-metal-rouille.webp", content_type: "image/webp")
 Rmr.save!
 
 

@@ -1,18 +1,24 @@
 // When the user scrolls down, resize the navbar's padding and the logo's font size
 window.onload = function() {
+  if (window.innerWidth > 768) {
+    window.onscroll = function() {
+      scrollFunction();
+    };
 
-  window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      var navbar = document.getElementById("navbar");
+      var logo = document.getElementById("logo");
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("navbar").style.height = "60px";
-      document.getElementById("logo").style.fontSize = "24px";
-      document.getElementById("navbar").style.fontSize = "18px";
-    } else {
-      document.getElementById("navbar").style.height = "80px";
-      document.getElementById("logo").style.fontSize = "28px";
-      document.getElementById("navbar").style.fontSize = "20px";
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navbar.style.height = "60px";
+        navbar.style.fontSize = "18px";
+        logo.style.fontSize = "24px";
+      } else {
+        navbar.style.height = "80px";
+        navbar.style.fontSize = "20px";
+        logo.style.fontSize = "28px";
+      }
     }
   }
-
 };
+

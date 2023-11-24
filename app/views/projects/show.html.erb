@@ -2,9 +2,9 @@
 
   <%# IMAGE HERE %>
   <% if @project.photo.attached? %>
-    <%= cl_image_tag @project.photo.key, width: 1000, height: 400, class: "project-image" %>
+    <%= cl_image_tag @project.photo.key, width: 1000, height: 500, class: "project-image" %>
   <% else %>
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 400, class: "project-image") %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 500, class: "project-image") %>
   <% end %>
 
   <h1 class="project-title h1-light-red fade-in-text"><%= @project.name.upcase %></h1>

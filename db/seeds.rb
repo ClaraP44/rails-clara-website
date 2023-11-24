@@ -215,10 +215,17 @@ STDevelopments = Project.create!(
   web_languages: [HTML_CSS],
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/stdevelopments.jpg"))
-STDevelopments.photo.attach(io: file, filename: "stdevelopments.jpg", content_type: "image/jpeg")
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/st-developments.webp"))
+STDevelopments.photo.attach(io: file, filename: "st-developments.webp", content_type: "image/webp")
 STDevelopments.save!
 
+# Logo
+file = File.open(Rails.root.join("db/seeds_pics/projects/stdevelopments/logo-st-developments.webp"))
+STDevelopments.logo.attach(io: file, filename: "logo-st-developments.webp", content_type: "image/webp")
+STDevelopments.save!
+
+# Project's images
 image_paths_stdevelopments = ['homepage.jpg', 'prestation.jpg', 'a-propos.jpg', 'clients.jpg', 'blog.jpg']
 
 image_paths_stdevelopments.each do |image_path|

@@ -60,6 +60,24 @@
     filter: grayscale(0%);
     transition: filter 0.3s ease;
   }
+
+  .project-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    .project-logo {
+      max-width: 190px;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+    }
+  }
+
+  &:hover .project-logo {
+    opacity: 0;
+  }
 }
 
 .image-container-projects {

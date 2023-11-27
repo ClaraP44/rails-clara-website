@@ -3,6 +3,14 @@
   <%# IMAGE HERE %>
   <% if @project.photo.attached? %>
     <%= cl_image_tag @project.photo.key, width: 1000, height: 500, class: "project-image" %>
+
+    <!-- LOGO'S PROJECT -->
+    <% if @project.name == "ST Developments" %>
+      <div class="project-logo-container">
+        <%= cl_image_tag(@project.logo.key, class: "project-logo") if @project.logo.attached? %>
+      </div>
+    <% end %>
+
   <% else %>
     <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 500, class: "project-image") %>
   <% end %>

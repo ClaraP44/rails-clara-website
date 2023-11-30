@@ -19,7 +19,7 @@
               <%= cl_image_tag project.photo.key, class: "img-vignette-projects object-fit-cover" %>
 
               <!-- LOGO'S PROJECT -->
-              <% if project.name == "ST Developments" %>
+              <% if project.name == "ST Developments" || "Geocool" %>
                 <div class="project-logo-container">
                   <%= cl_image_tag(project.logo.key, class: "project-logo") if project.logo.attached? %>
                 </div>

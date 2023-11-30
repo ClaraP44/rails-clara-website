@@ -94,12 +94,18 @@ Geocool = Project.create!(
   web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/geocool.jpg"))
-Geocool.photo.attach(io: file, filename: "geocool.jpg", content_type: "image/jpeg")
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/geocool.webp"))
+Geocool.photo.attach(io: file, filename: "geocool.webp", content_type: "image/webp")
 Geocool.save!
 
-image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'resultats.jpg']
+# Logo
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/logo-geocool.webp"))
+Geocool.logo.attach(io: file, filename: "logo-geocool.webp", content_type: "image/webp")
+Geocool.save!
 
+# Project's images
+image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'resultats.jpg']
 image_paths.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/geocool', image_path))
   Geocool.project_images.create(image: uploaded_image['secure_url'])

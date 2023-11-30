@@ -6,7 +6,7 @@
       <%= cl_image_tag @project.photo.key %>
 
       <!-- LOGO'S PROJECT -->
-      <% if @project.name == "ST Developments" %>
+      <% if @project.name == "ST Developments" || "Geocool" %>
         <div class="page-show-project-logo-container">
           <%= cl_image_tag(@project.logo.key, class: "page-show-project-logo") if @project.logo.attached? %>
         </div>

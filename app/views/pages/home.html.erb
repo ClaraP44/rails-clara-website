@@ -23,8 +23,6 @@
   <div class="padding-bottom-100px">
     <h2 class="h2-homepage text-align-center">PROJETS</h2>
 
-    <%# TODO %>
-
     <div class="projects-homepage">
       <% @projects.first(4).each do |project| %>
         <div class="img-vignette-project-homepage">
@@ -32,7 +30,15 @@
           <%= link_to project_path(project), class: "image-link" do %>
             <div class="image-container-projects-homepage">
               <% if project.photo.attached? %>
-                <%= cl_image_tag project.photo.key, width: 250, height: 250, class: "object-fit-cover" %>
+                <%= cl_image_tag project.photo.key, width: 250, height: 250, class: "homepage-vignette object-fit-cover" %>
+
+                <!-- LOGO'S PROJECT -->
+                <% if project.name == "ST Developments" || "Geocool" %>
+                  <div class="homepage-vignette-logo-container">
+                    <%= cl_image_tag(project.logo.key, class: "homepage-vignette-logo") if project.logo.attached? %>
+                  </div>
+                <% end %>
+
               <% else %>
                 <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 250, height: 250, crop: :fill) %>
               <% end %>

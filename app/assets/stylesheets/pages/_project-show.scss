@@ -115,6 +115,10 @@
 @media screen and (max-width: 480px) {
   .container-project-image {
     max-height: 300px;
+
+    .page-show-project-logo {
+      max-width: 150px;
+    }
   }
 }
 

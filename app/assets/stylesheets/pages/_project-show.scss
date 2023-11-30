@@ -1,5 +1,6 @@
 .container-page-project-show {
   padding-bottom: 80px;
+  position: relative; /* Ajout de position relative pour le positionnement absolu du logo */
 
   h1 {
     padding-top: 40px;
@@ -12,20 +13,22 @@
   padding-bottom: 50px;
 }
 
-.project-image {
-  object-fit: cover;
+.container-project-image {
+  position: relative;
+  overflow: hidden; /* Assure que le logo ne dépasse pas l'image */
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
-  max-width: 100%;
-}
+  max-width: 1000px;
+  height: 500px;
 
-.page-show-project-logo-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  .page-show-project-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .page-show-project-logo {
-    max-width: 190px;
+    max-width: 250px;
   }
 }
 
@@ -53,7 +56,6 @@
       width: 35%;
     }
   }
-
 }
 
 .project-images {
@@ -69,11 +71,8 @@
   }
 }
 
-
-
 // NEXT PROJECT PART
 .next-project-part {
-
   div {
     display: flex;
     justify-content: space-between;
@@ -87,10 +86,7 @@
   }
 }
 
-
-
 // RESPONSIVE
-
 @media screen and (max-width: 768px) {
   .project-intro {
     display: block;
@@ -112,15 +108,144 @@
       h2 {
         width: 50%;
       }
-
     }
-
   }
-
 }
 
 @media screen and (max-width: 480px) {
-  .project-image {
+  .container-project-image {
     max-height: 300px;
   }
 }
+
+
+
+
+// .container-page-project-show {
+//   padding-bottom: 80px;
+
+//   h1 {
+//     padding-top: 40px;
+//   }
+// }
+
+// .project-title {
+//   line-height: 1em;
+//   text-align: center;
+//   padding-bottom: 50px;
+// }
+
+// .project-image {
+//   object-fit: cover;
+//   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+//   width: 1000px;
+//   height: 500px;
+//   max-width: 100%;
+// }
+
+// .page-show-project-logo-container {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+
+//   .page-show-project-logo {
+//     max-width: 250px;
+//   }
+// }
+
+// .project-intro {
+//   display: flex;
+//   padding-bottom: 100px;
+
+//   div>div {
+//     align-items: baseline;
+//   }
+// }
+
+// .project-description {
+//   width: 50%;
+// }
+
+// .project-data {
+//   width: 50%;
+
+//   div {
+//     display: flex;
+//     padding-bottom: 15px;
+
+//     h2 {
+//       width: 35%;
+//     }
+//   }
+
+// }
+
+// .project-images {
+//   display: grid;
+//   row-gap: 20px;
+// }
+
+// .project-image-alone {
+//   img {
+//     object-fit: cover;
+//     width: 100%;
+//     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+//   }
+// }
+
+
+
+// // NEXT PROJECT PART
+// .next-project-part {
+
+//   div {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   hr {
+//     margin-top: 5rem;
+//     margin-bottom: 1rem;
+//     border: 0.5px solid #222222;
+//   }
+// }
+
+
+
+// // RESPONSIVE
+
+// @media screen and (max-width: 768px) {
+//   .project-intro {
+//     display: block;
+//   }
+
+//   .project-description {
+//     width: 100%;
+//     text-align: center;
+//     padding-top: 50px;
+//   }
+
+//   .project-data {
+//     width: 100%;
+
+//     div {
+//       display: flex;
+//       padding-bottom: 15px;
+
+//       h2 {
+//         width: 50%;
+//       }
+
+//     }
+
+//   }
+
+// }
+
+// @media screen and (max-width: 480px) {
+//   .project-image {
+//     max-height: 300px;
+//   }
+// }

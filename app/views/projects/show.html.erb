@@ -2,17 +2,20 @@
 
   <%# IMAGE HERE %>
   <% if @project.photo.attached? %>
-    <%= cl_image_tag @project.photo.key, width: 1000, height: 500, class: "project-image" %>
+    <div class="container-project-image">
+      <%= cl_image_tag @project.photo.key %>
 
-    <!-- LOGO'S PROJECT -->
-    <% if @project.name == "ST Developments" %>
-      <div class="page-show-project-logo-container">
-        <%= cl_image_tag(@project.logo.key, class: "page-show-project-logo") if @project.logo.attached? %>
-      </div>
-    <% end %>
+      <!-- LOGO'S PROJECT -->
+      <% if @project.name == "ST Developments" %>
+        <div class="page-show-project-logo-container">
+          <%= cl_image_tag(@project.logo.key, class: "page-show-project-logo") if @project.logo.attached? %>
+        </div>
+      <% end %>
+
+    </div>
 
   <% else %>
-    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg", width: 1000, height: 500, class: "project-image") %>
+    <%= cl_image_tag("mzkmpzx9dwxceco562qhx49zpug0.jpg") %>
   <% end %>
 
   <h1 class="project-title h1-light-red fade-in-text"><%= @project.name.upcase %></h1>

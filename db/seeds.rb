@@ -105,6 +105,11 @@ file = File.open(Rails.root.join("db/seeds_pics/projects/porfolio/portfolio.webp
 Portfolio.photo.attach(io: file, filename: "portfolio.webp", content_type: "image/webp")
 Portfolio.save!
 
+# Logo
+file = File.open(Rails.root.join("db/seeds_pics/projects/porfolio/logo-portfolio.webp"))
+Portfolio.logo.attach(io: file, filename: "logo-portfolio.webp", content_type: "image/webp")
+Portfolio.save!
+
 
 
 puts "Creating project Geocool"

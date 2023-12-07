@@ -170,7 +170,7 @@ Léapicota = Project.create!(
   year: 2022,
   client: "Léa PICOT",
   team: "Léa PICOT",
-  description: "Léa PICOT, alias Léapicota, est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
+  description: "Léa PICOT est designer graphique spécialisée en design alimentaire. Elle souhaitait un site web pour présenter ses différents projets professionnels. Le site a été réalisé sur Wordpress avec Divi et en coréalisation avec Léa, qui s'est occupée de la partie design.",
   web_languages: [HTML_CSS]
 )
 

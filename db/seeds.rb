@@ -156,7 +156,9 @@ AirPasSoft.photo.attach(io: file, filename: "air-pas-soft.webp", content_type: "
 AirPasSoft.save!
 
 # Logo
-
+file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/logo-air-pas-soft.webp"))
+AirPasSoft.logo.attach(io: file, filename: "logo-air-pas-soft.webp", content_type: "image/webp")
+AirPasSoft.save!
 
 # Project's images
 image_paths_airpassoft = ['homepage.jpg', 'weapons.jpg', 'weapon.jpg', 'myweapons.jpg', 'newweapon.jpg']

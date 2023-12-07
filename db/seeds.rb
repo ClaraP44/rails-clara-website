@@ -150,12 +150,16 @@ AirPasSoft = Project.create!(
 
 # AirPasSoft.web_languages << Ruby
 
-file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/airpassoft.jpg"))
-AirPasSoft.photo.attach(io: file, filename: "airpassoft.jpg", content_type: "image/jpeg")
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/airpassoft/air-pas-soft.webp"))
+AirPasSoft.photo.attach(io: file, filename: "air-pas-soft.webp", content_type: "image/webp")
 AirPasSoft.save!
 
-image_paths_airpassoft = ['homepage.jpg', 'weapons.jpg', 'weapon.jpg', 'myweapons.jpg', 'newweapon.jpg']
+# Logo
 
+
+# Project's images
+image_paths_airpassoft = ['homepage.jpg', 'weapons.jpg', 'weapon.jpg', 'myweapons.jpg', 'newweapon.jpg']
 image_paths_airpassoft.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/airpassoft', image_path))
   AirPasSoft.project_images.create(image: uploaded_image['secure_url'])
@@ -233,7 +237,6 @@ STDevelopments.save!
 
 # Project's images
 image_paths_stdevelopments = ['homepage.jpg', 'prestation.jpg', 'a-propos.jpg', 'clients.jpg', 'blog.jpg']
-
 image_paths_stdevelopments.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/stdevelopments', image_path))
   STDevelopments.project_images.create(image: uploaded_image['secure_url'])

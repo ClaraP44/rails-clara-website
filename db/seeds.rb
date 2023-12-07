@@ -130,9 +130,9 @@ Geocool.photo.attach(io: file, filename: "geocool.webp", content_type: "image/we
 Geocool.save!
 
 # Logo
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/logo-geocool.webp"))
-Geocool.logo.attach(io: file, filename: "logo-geocool.webp", content_type: "image/webp")
-Geocool.save!
+# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/logo-geocool.webp"))
+# Geocool.logo.attach(io: file, filename: "logo-geocool.webp", content_type: "image/webp")
+# Geocool.save!
 
 # Project's images
 image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'resultats.jpg']

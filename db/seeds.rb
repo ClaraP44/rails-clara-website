@@ -92,7 +92,7 @@ end
 puts "Creating project Portfolio"
 Portfolio = Project.create!(
   categories: [Web_development],
-  name: "Site personnel",
+  name: "Portfolio",
   year: 2023,
   client: "",
   team: "",

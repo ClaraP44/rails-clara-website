@@ -66,19 +66,20 @@ puts "Creating projects"
 
 # PROJECTS
 
-# puts "Creating project Site personnel"
-# SitePersonnel = Project.create!(
-#   categories: [Web_development],
-#   name: "Site personnel",
-#   year: 2023,
-#   client: "",
-#   team: "",
-#   description: "...",
-# )
+puts "Creating project Site personnel"
+SitePersonnel = Project.create!(
+  categories: [Web_development],
+  name: "Site personnel",
+  year: 2023,
+  client: "",
+  team: "",
+  description: "...",
+)
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-# SitePersonnel.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
-# SitePersonnel.save!
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+SitePersonnel.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+SitePersonnel.save!
 
 
 
@@ -216,6 +217,23 @@ Rmr.save!
 
 
 
+puts "Creating project RapidCouture"
+RapidCouture = Project.create!(
+  categories: [Video_editing],
+  name: "Rapid Couture",
+  year: 2022,
+  client: "Rapid Couture",
+  team: "",
+  description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
+)
+
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+RapidCouture.save!
+
+
+
 puts "Creating project STDevelopments"
 STDevelopments = Project.create!(
   categories: [Wordpress],
@@ -245,19 +263,21 @@ image_paths_stdevelopments.each do |image_path|
 end
 
 
-# puts "Creating project RapidCouture"
-# RapidCouture = Project.create!(
-#   categories: [Video_editing],
-#   name: "Rapid Couture",
-#   year: 2022,
-#   client: "Rapid Couture",
-#   team: "",
-#   description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Réalisation d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
-# )
 
-# file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-# RapidCouture.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
-# RapidCouture.save!
+puts "Creating project Mobilum"
+Mobilum = Project.create!(
+  categories: [Graphic_design],
+  name: "Mobilum",
+  year: 2019,
+  client: "Mobilum",
+  team: "",
+  description: "Mobilum est une entreprise experte dans la fabrication de mobilier urbain en béton fibré.",
+)
+
+# Main image
+file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
+Mobilum.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+Mobilum.save!
 
 
 

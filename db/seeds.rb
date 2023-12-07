@@ -89,8 +89,8 @@ end
 
 
 
-puts "Creating project Site personnel"
-SitePersonnel = Project.create!(
+puts "Creating project Portfolio"
+Portfolio = Project.create!(
   categories: [Web_development],
   name: "Site personnel",
   year: 2023,
@@ -101,9 +101,9 @@ SitePersonnel = Project.create!(
 )
 
 # Main image
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-SitePersonnel.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
-SitePersonnel.save!
+file = File.open(Rails.root.join("db/seeds_pics/projects/porfolio/portfolio.webp"))
+Portfolio.photo.attach(io: file, filename: "portfolio.webp", content_type: "image/webp")
+Portfolio.save!
 
 
 

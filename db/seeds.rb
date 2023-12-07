@@ -66,6 +66,29 @@ puts "Creating projects"
 
 # PROJECTS
 
+puts "Creating project Noise Impulsion"
+NoiseImpulsion = Project.create!(
+  categories: [Graphic_design],
+  name: "Noise Impulsion",
+  year: 2023,
+  client: "Noise Impulsion",
+  team: "",
+  description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables pour notre communauté."
+)
+
+file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
+NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
+NoiseImpulsion.save!
+
+image_paths_noiseimpulsion = ['moodboard.jpg', 'feed-instagram.jpg']
+
+image_paths_noiseimpulsion.each do |image_path|
+  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noise_impulsion', image_path))
+  NoiseImpulsion.project_images.create(image: uploaded_image['secure_url'])
+end
+
+
+
 puts "Creating project Site personnel"
 SitePersonnel = Project.create!(
   categories: [Web_development],
@@ -73,7 +96,8 @@ SitePersonnel = Project.create!(
   year: 2023,
   client: "",
   team: "",
-  description: "...",
+  description: "Créé avec Ruby on Rails.",
+  web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
 # Main image
@@ -110,29 +134,6 @@ image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'r
 image_paths.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/geocool', image_path))
   Geocool.project_images.create(image: uploaded_image['secure_url'])
-end
-
-
-
-puts "Creating project Noise Impulsion"
-NoiseImpulsion = Project.create!(
-  categories: [Graphic_design],
-  name: "Noise Impulsion",
-  year: 2023,
-  client: "Noise Impulsion",
-  team: "",
-  description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables pour notre communauté.",
-)
-
-file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
-NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
-NoiseImpulsion.save!
-
-image_paths_noiseimpulsion = ['moodboard.jpg', 'feed-instagram.jpg']
-
-image_paths_noiseimpulsion.each do |image_path|
-  uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noise_impulsion', image_path))
-  NoiseImpulsion.project_images.create(image: uploaded_image['secure_url'])
 end
 
 
@@ -242,7 +243,7 @@ STDevelopments = Project.create!(
   client: "ST Developments",
   team: "",
   description: "Cabinet de conseil spécialisé en développement de franchise, ST Developments souhaitait refondre son site internet. Les utilisateurs peuvent notamment en apprendre plus sur les prestations proposées, voir les franchises clientes et postuler en tant que futur(e) franchisé(e). Le site a été réalisé sur Wordpress et en utilisant un template de Muffin Group.",
-  web_languages: [HTML_CSS],
+  web_languages: [HTML_CSS]
 )
 
 # Main image
@@ -271,7 +272,7 @@ Mobilum = Project.create!(
   year: 2019,
   client: "Mobilum",
   team: "",
-  description: "Mobilum est une entreprise experte dans la fabrication de mobilier urbain en béton fibré.",
+  description: "Mobilum est une entreprise experte dans la fabrication de mobilier urbain en béton fibré."
 )
 
 # Main image

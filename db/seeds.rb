@@ -135,7 +135,7 @@ Geocool.save!
 # Geocool.save!
 
 # Project's images
-image_paths = ['homepage.jpg', 'project-name.jpg', 'batiment.jpg', 'sol.jpg', 'resultats.jpg']
+image_paths = ['homepage.webp', 'project-name.webp', 'batiment.webp', 'sol.webp', 'resultats.webp']
 image_paths.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/geocool', image_path))
   Geocool.project_images.create(image: uploaded_image['secure_url'])
@@ -262,7 +262,7 @@ STDevelopments.logo.attach(io: file, filename: "logo-st-developments.webp", cont
 STDevelopments.save!
 
 # Project's images
-image_paths_stdevelopments = ['homepage.jpg', 'prestation.jpg', 'a-propos.jpg', 'clients.jpg', 'blog.jpg']
+image_paths_stdevelopments = ['homepage.webp', 'prestation.webp', 'a-propos.webp', 'clients.webp', 'blog.webp']
 image_paths_stdevelopments.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/stdevelopments', image_path))
   STDevelopments.project_images.create(image: uploaded_image['secure_url'])

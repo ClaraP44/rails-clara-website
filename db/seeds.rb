@@ -281,8 +281,8 @@ Mobilum = Project.create!(
 )
 
 # Main image
-file = File.open(Rails.root.join("db/seeds_pics/projects/geocool/image-test.jpg"))
-Mobilum.photo.attach(io: file, filename: "image-test.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds_pics/projects/mobilum/mobilum.webp"))
+Mobilum.photo.attach(io: file, filename: "mobilum.webp", content_type: "image/webp")
 Mobilum.save!
 
 

@@ -262,7 +262,7 @@ STDevelopments.logo.attach(io: file, filename: "logo-st-developments.webp", cont
 STDevelopments.save!
 
 # Project's images
-image_paths_stdevelopments = ['homepage.webp', 'prestation.webp', 'a-propos.webp', 'clients.webp', 'blog.webp']
+image_paths_stdevelopments = ['homepage.webp', 'prestation.webp', 'a-propos.webp', 'blog.webp']
 image_paths_stdevelopments.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/stdevelopments', image_path))
   STDevelopments.project_images.create(image: uploaded_image['secure_url'])

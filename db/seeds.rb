@@ -76,12 +76,13 @@ NoiseImpulsion = Project.create!(
   description: "Noise Impulsion est une association nantaise qui a pour mission l'organisation de concerts rock/metal éco-responsables. L'objectif était de créer une charte graphique pour Instagram afin que nos publications soient plus facilement identifiables pour notre communauté."
 )
 
+# Main image
 file = File.open(Rails.root.join("db/seeds_pics/projects/noise_impulsion/noise-impulsion.jpg"))
 NoiseImpulsion.photo.attach(io: file, filename: "noise-impulsion.jpg", content_type: "image/jpeg")
 NoiseImpulsion.save!
 
+# Project's images
 image_paths_noiseimpulsion = ['moodboard.jpg', 'feed-instagram.jpg']
-
 image_paths_noiseimpulsion.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/noise_impulsion', image_path))
   NoiseImpulsion.project_images.create(image: uploaded_image['secure_url'])
@@ -193,12 +194,13 @@ Léapicota = Project.create!(
 # Léapicota.photo.attach(io: StringIO.new(cloudinary_image_leapicota), filename: 'leapicota.jpg')
 # Léapicota.save!
 
+# Main image
 file = File.open(Rails.root.join("db/seeds_pics/projects/leapicota/leapicota.webp"))
 Léapicota.photo.attach(io: file, filename: "leapicota.webp", content_type: "image/webp")
 Léapicota.save!
 
+# Project's images
 image_paths_leapicota = ['realisations.jpg', 'a-propos.jpg', 'cv.jpg', 'contact.jpg']
-
 image_paths_leapicota.each do |image_path|
   uploaded_image = Cloudinary::Uploader.upload(File.join(Rails.root, 'db/seeds_pics/projects/leapicota', image_path))
   Léapicota.project_images.create(image: uploaded_image['secure_url'])
@@ -217,6 +219,7 @@ Rmr = Project.create!(
   youtube_url: "https://www.youtube.com/embed/y80XRItfnUA"
 )
 
+# Main image
 file = File.open(Rails.root.join("db/seeds_pics/projects/rmr/recyclage-de-metal-rouille.webp"))
 Rmr.photo.attach(io: file, filename: "recyclage-de-metal-rouille.webp", content_type: "image/webp")
 Rmr.save!

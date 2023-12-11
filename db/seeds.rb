@@ -280,7 +280,7 @@ Mobilum = Project.create!(
   year: 2019,
   client: "Mobilum",
   team: "",
-  description: "Mobilum est une entreprise experte dans la fabrication de mobilier urbain en béton fibré."
+  description: "Mobilum est une entreprise experte dans la fabrication de mobilier urbain en béton fibré. La marque souhaitait un moyen de communication tel qu'un catalogue pour se présenter auprès des collectivités territoriales et tous professionnels gravitant autour des projets urbains."
 )
 
 # Main image

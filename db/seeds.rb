@@ -234,6 +234,7 @@ RapidCouture = Project.create!(
   client: "Rapid Couture",
   team: "",
   description: "Enseigne leader de retouches et travaux de couture, Rapid couture souhaitait développer son réseau. Pour cela, j'ai réalisé d'une vidéo publiée sur Facebook ads à l'intention de futurs candidats franchisés.",
+  youtube_url: "https://www.youtube.com/embed/y80XRItfnUA"
 )
 
 # Main image

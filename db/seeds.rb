@@ -97,7 +97,7 @@ Portfolio = Project.create!(
   year: 2023,
   client: "",
   team: "",
-  description: "Créé avec Ruby on Rails.",
+  description: "Créé avec Ruby on Rails, ce portfolio présente quelques projets que j'ai réalisé.",
   web_languages: [Ruby, HTML_CSS, Javascript]
 )
 
